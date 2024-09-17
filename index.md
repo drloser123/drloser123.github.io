@@ -1,8 +1,7 @@
 ---
-title: Home
+title: OSR
+nav_order: 1
 layout: home
 ---
-
-# OSR et Nico
 
 Diverses règles et idées pour jouer dans la mouvance Old School Renaissance

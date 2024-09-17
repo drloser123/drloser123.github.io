@@ -1,7 +1,7 @@
 ---
 title: Règles pour le MJ
 nav_order: 15
-parent: Home
+parent: OSR
 layout: default
 ---
 

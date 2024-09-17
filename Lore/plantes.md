@@ -1,7 +1,7 @@
 ---
 title: Plantes
 nav_order: 20
-parent: Home
+parent: OSR
 layout: default
 ---
 

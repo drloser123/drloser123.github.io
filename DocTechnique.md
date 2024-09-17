@@ -1,11 +1,9 @@
 ---
 title: Doc techniques
 nav_order: 99
-parent: Home
 layout: default
 ---
 
-# Documentation technique
 - [Just the Docs] et son [README]
 - [Jekyll]
 - [Convertir une Google Sheet en Markdown](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/)

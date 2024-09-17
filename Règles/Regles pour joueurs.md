@@ -1,7 +1,7 @@
 ---
 title: Règles pour les joueurs
 nav_order: 10
-parent: Home
+parent: OSR
 layout: default
 ---
 
