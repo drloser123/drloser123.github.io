@@ -13,7 +13,7 @@ Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier 
 ## Mort
 ### Tomber à 0 PV
 Quand un PJ ou un PNJ important atteint **0 PV** : 
-- Il lui reste 3 rounds avant de mourir
+- Il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné
 - Il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient
 
 ### Stabiliser
