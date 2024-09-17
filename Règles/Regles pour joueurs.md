@@ -95,3 +95,8 @@ Les autres actions permettant de gagner des XP sont :
 
 ### Marche forcée
 +50% de distance. Nécessite 1 jour de repos, sinon ajoute un niveau de fatigue.
+
+### A FAIRE
+PV au niveau 1, et au delà
+
+Recopier et apprendre des sorts
