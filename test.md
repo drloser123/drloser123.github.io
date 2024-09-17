@@ -1,6 +1,5 @@
 ---
-title: Test
-layout: home
+title: Règles maisons
 ---
 
 Hello world
