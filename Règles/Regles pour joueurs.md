@@ -12,19 +12,13 @@ Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier 
 
 ## Mort
 ### Tomber à 0 PV
-Quand un PJ ou un PNJ important atteint **0 PV** : 
-- Il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné
-- Il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient
+Quand un PJ ou un PNJ important atteint **0 PV** il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné. De plus, il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient.
 
 ### Stabiliser
-Pour stabiliser un personnage mourant, il faut :
-- Utiliser une action 
-- Réussir un jet de sagesse. Un personnage ne peut faire qu'une seule tentative. S'il ne possède pas de bandage, il fait son jet à -4
+Pour stabiliser un personnage mourant, il faut utiliser une action et réussir un jet de sagesse. Un personnage ne peut faire qu'une seule tentative. S'il ne possède pas de bandage, il fait son jet à -4
 
 ### Ressusciter
-Pour ressusciter un personnage, il faut :
-- trouver un temple possédant un clerc de niveau 7
-- faire une offrande égale au nombres d'XP actuels du personnage décédé
+Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de niveau 7, puis faire une offrande égale au nombres d'XP actuels du personnage décédé
 
 ## Prix des potions de soin
 - 250 PO - 1D6+1
