@@ -7,7 +7,7 @@ layout: default
 # Plantes
 
 ## Cueillette
-.text-grey-lt-000 Le personnage doit consacrer **4 heures à la cueillette**. Dans ce laps de temps, il peut faire 2 **recherches**, ou 4 s'il a des affinités avec la nature : barbare, druide, etc.
+Le personnage doit consacrer **4 heures à la cueillette**. Dans ce laps de temps, il peut faire 2 **recherches**, ou 4 s'il a des affinités avec la nature : barbare, druide, etc.
 
 Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque recherche, il lance 1d6 et consulte les tables ci-dessous pour savoir s'il a trouvé ce qu'il cherchait.			
 
@@ -37,26 +37,26 @@ Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque reche
 
 | Probabilité de trouver    | Nom                 | Effet                                  | Effets secondaires                                                                                    | Apparence                                                                             |
 | ------------------------- | ------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| 1-sur-6^1^                | Herbe à fée         | Retire les malédictions                | Hallucinations<br>Sav. vs sorts ou hallucinations pendant 24h                                         | Herbe qui luit à la pleine lune                                                       |
+| 1-sur-6<sup>1</sup>       | Herbe à fée         | Retire les malédictions                | Hallucinations<br>Sav. vs sorts ou hallucinations pendant 24h                                         | Herbe qui luit à la pleine lune                                                       |
 | 1-sur-6                   | Miel pourpre        | Sens hyper développés pendant 24h      | Hyper sensibilté<br>Sav. vs sorts ou risque d'être ébloui, assourdi, etc. dès que le sens est stimulé | Protégé par des abeilles rayées de rouge<br>Sav. vs Souffle ou -1D4PV en le récoltant |
 | 1-sur-6                   | Champibleu          | Soigne la pétrifiction                 | Somnolence<br>Sav. vs sorts ou -1 à toutes les actions pendant 24h                                    | Petit champignon bleu qui sent la transpiration                                       |
 | 1-sur-6                   | Spores arcaniques   | Détection de la magie pendant 1 round  | Fait briller la peau en rose durant 1 semaine                                                         | Pressez le champignon pour lâcher ses spores                                          |
 | 1-sur-6                   | Aquabulbe           | Respiration aquatique<br>durant 1 tour | Nausée<br>Sav. vs sorts ou vomissement d'eau et -2 à toutes les actions durant 1h                     | Gros bulbe bleu surmonté d'une tige verte                                             |
-| 1-sur-6^2^                | Pissenlit des anges | Résurection                            | Folie<br>Sav. vs sorts où est hanté par les souvenirs du mort                                         | Pissenlit à fleur violette                                                            |
+| 1-sur-6<sup>2</sup>       | Pissenlit des anges | Résurection                            | Folie<br>Sav. vs sorts où est hanté par les souvenirs du mort                                         | Pissenlit à fleur violette                                                            |
 
-1. uniquement à la pleine lune
-2. pousse uniquement sur les tombes fraiches (moins de 1 semaine) - une seule recherche possible par tombe
+1. Uniquement à la pleine lune
+2. Pousse uniquement sur les tombes fraiches (moins de 1 semaine) - une seule recherche possible par tombe
 
 | Probabilité de trouver    | Nom                   | Effet si on rate un jet de sauvegarde | Prise                                                                    | Apparence                                   |
 | ------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------- |
 | 1-sur-6                   | Feuille de cauchemard | Sommeil en 1 tour                     | Ingestion ou injection                                                   | Sève d'un lierre de couleur rouge           |
-| 1-sur-6^1^                | Pollen onirique       | Sommeil instantané                    | Respiration - nécessite un jet d'attaque à distance                      | Poudre extraite d'une petite fleur violette |
-| 1-sur-6^2^                | Oeil de basilic       | Paralysie en 2D4 rounds               | Ingestion ou injection                                                   | Grosse fleur grise aux pétales crystalisés  |
+| 1-sur-6<sup>1</sup>       | Pollen onirique       | Sommeil instantané                    | Respiration - nécessite un jet d'attaque à distance                      | Poudre extraite d'une petite fleur violette |
+| 1-sur-6<sup>2</sup>       | Oeil de basilic       | Paralysie en 2D4 rounds               | Ingestion ou injection                                                   | Grosse fleur grise aux pétales crystalisés  |
 | 1-sur-6                   | Jasmouche             | Nausée, -2 à l'attaque                | Respiration - nécessite un jet d'attaque à distance                      | Gaz receuilli en faisant fermenté la plante |
-| 1-sur-6^3^                | Cœur de scorpion      | \-2D6 PV                              | Appliquer sur une lame - fonctionne une seule fois - se dissipe après 1h | Petit fruit oval et rouge sang              |
-| 1-sur-6^4^                | Lotus noir            | Mort en 1D4 rounds                    | Ingestion ou injection                                                   | Fleur de lotus noir                         |
+| 1-sur-6<sup>3</sup>       | Cœur de scorpion      | \-2D6 PV                              | Appliquer sur une lame - fonctionne une seule fois - se dissipe après 1h | Petit fruit oval et rouge sang              |
+| 1-sur-6<sup>4</sup>       | Lotus noir            | Mort en 1D4 rounds                    | Ingestion ou injection                                                   | Fleur de lotus noir                         |
 
-1. uniquement en forêt
-2. uniquement en montagne
-3. uniquement dans la jungle
-4. uniquement dans les marais
+1. Uniquement en forêt
+2. Uniquement en montagne
+3. Uniquement dans la jungle
+4. Uniquement dans les marais
