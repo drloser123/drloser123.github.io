@@ -4,13 +4,6 @@ parent: Règles maisons
 layout: default
 ---
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
 | Probabilité de trouver | Nom            | Effet    | Goût              | Apparence |
 |:-----------------------|:---------------|:---------|:------------------|:----------|
 | 4-sur-6                |Herbe à pélerin | 1 ration | Insipide          |Graminée semblable au blé |
