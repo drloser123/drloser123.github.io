@@ -1,6 +1,7 @@
 ---
 title: Plantes
-parent: Règles maisons
+nav_order: 2
+parent: Home
 layout: default
 ---
 
