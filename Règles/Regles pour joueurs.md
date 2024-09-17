@@ -65,7 +65,7 @@ Par défaut, lorsqu'une action est particulièrement difficile, les personnages 
 - **Utiliser des outils :** +1 chance sur 6
 
 ## Gagner des XP
-Chaque PO récupérée vous fait gagner 1/2 XP.
+Chaque PO récupérée fait gagner 1/2 XP.
 
 Les autres actions permettant de gagner des XP sont :
 - Confirmer ou infirmer une rumeur +
