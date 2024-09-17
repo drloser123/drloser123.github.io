@@ -51,6 +51,8 @@ Les autres actions permettant de gagner des XP sont :
 - Utiliser un skill/équipement de façon créative et utile ++
 - Surmonter un obstacle ou un danger environnemental ++
 
+[La Google Sheet utilisée](https://docs.google.com/spreadsheets/d/1JQJiqZTvU0kxDpQw3KlNBQAV_mU8s1HB_R7IB_hyJyk/edit?gid=0#gid=0)
+
 ## Fatigue
 - **Mauvaise nuit** : passer une mauvaise nuit ajoute un niveau de fatigue
 - **24h de repos** : supprime tous les niveaux de fatigue
