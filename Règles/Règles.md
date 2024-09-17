@@ -36,7 +36,6 @@ Le bonus au toucher est égal au nombre de HD-1. Ou égale au HD s'il y a une as
 - Sans armure : 30 à 40Km/jour (5Km/h) => 1 hexagone en 2h
 - Armure légère : 2/3 vitesse => 1 hex en 3h
 - Armure lourde : 1/3 vitesse => 1 hex en 6h
-
 - Désert, forêt, collines : 2/3 vitesse => 1 hex en 3h
 - Jungle, montagne, marais : 1/2 vitesse => 1 hex en 4h
 - Routes entretenues : vitesse x2 => 1 hex en 1h
