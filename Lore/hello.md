@@ -4,6 +4,8 @@ parent: Règles maisons
 layout: default
 ---
 
+# Plantes
+
 ## Règles de ceuillette
 Le personnage doit consacrer **4 heures à la ceuillette**. Dans ce laps de temps, il peut faire 2 recherches, ou 4 s'il a des affinités avec la nature (barbare, druide...). 
 
