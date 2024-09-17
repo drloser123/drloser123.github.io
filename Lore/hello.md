@@ -1,7 +1,7 @@
 ---
 title: Plantes
 parent: Règles maisons
-layout: minimal
+layout: default
 ---
 
 | Probabilité de trouver | Nom            | Effet    | Goût              | Apparence |
