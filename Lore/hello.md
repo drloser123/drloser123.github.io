@@ -6,8 +6,8 @@ layout: default
 
 # Plantes
 
-## Règles de ceuillette
-Le personnage doit consacrer **4 heures à la ceuillette**. Dans ce laps de temps, il peut faire 2 recherches, ou 4 s'il a des affinités avec la nature (barbare, druide...). 
+## Cueillette
+.text-grey-lt-000 Le personnage doit consacrer **4 heures à la cueillette**. Dans ce laps de temps, il peut faire 2 **recherches**, ou 4 s'il a des affinités avec la nature : barbare, druide, etc.
 
 Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque recherche, il lance 1d6 et consulte les tables ci-dessous pour savoir s'il a trouvé ce qu'il cherchait.			
 
