@@ -2,7 +2,8 @@ title: OSR et Nico
 description: Règles et autres pour jouer à OSR avec Nico
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: "https://drloser123.github.io/"
 
 aux_links:
-  Règles d'Old-School Essentials: https://oldschoolessentials.necroticgnome.com/fr/srd/index.php/Main_Page
+  Règles d'Old-School Essentials: 
+    - https://oldschoolessentials.necroticgnome.com/fr/srd/index.php/Main_Page

@@ -1,5 +1,5 @@
 ---
-title: Doc technique
+title: Doc techniques
 nav_order: 99
 parent: Home
 layout: default
