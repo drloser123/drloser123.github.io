@@ -112,6 +112,7 @@ Magie :
 - scroll de niveau supérieur : jet d'INT avec la différence de niveau en malus
 
 Encombrance :
+- ???
 
 Backstab : 
 - Max dommages x 2
