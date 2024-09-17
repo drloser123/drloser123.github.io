@@ -96,8 +96,11 @@ Les autres actions permettant de gagner des XP sont :
 ### Marche forcée
 +50% de distance. Nécessite 1 jour de repos, sinon ajoute un niveau de fatigue.
 
-### A FAIRE
-PV au niveau 1, et au delà
+## A FAIRE
+PV :
+
+- PV au niveau 1 = au minimum la moyenne du dé
+- Au delà on relance le DV. Si on fait un score < à celui actuel, on gagne 1
 
 Magie : 
 - on débute avec 3 sorts + lecture de la magie
@@ -108,6 +111,7 @@ Magie :
 - rituel : 1 tour par niveau
 - scroll de niveau supérieur : jet d'INT avec la différence de niveau en malus
 
-Encombrance
+Encombrance :
 
-Backstab : max dommages x 2
+Backstab : 
+- Max dommages x 2
