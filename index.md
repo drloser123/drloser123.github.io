@@ -3,6 +3,6 @@ title: Home
 layout: home
 ---
 
-# OSR par Nico
+# OSR et Nico
 
 Diverses règles et idées pour jouer dans la mouvance Old School Renaissance
