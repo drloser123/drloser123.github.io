@@ -8,7 +8,7 @@ layout: default
 1. TOC
 {:toc}
 ## Sacrifier un bouclier
-Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier pour absorber 1D10 points de dommages.
+Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier pour absorber un coup.
 
 ## Mort
 ### Tomber à 0 PV
@@ -99,4 +99,15 @@ Les autres actions permettant de gagner des XP sont :
 ### A FAIRE
 PV au niveau 1, et au delà
 
-Recopier et apprendre des sorts
+Magie : 
+- on débute avec 3 sorts + lecture de la magie
+- détection de la magien innée en se concentrant 1 tour
+- 3-sur-6 d'identifier un objet magique
+- apprentissage avec une base (mentor, scroll ou livre) : 1 jour par niveau de sort
+- apprentissage à partir de rien : 1 jour et 1000 PO par niveau de sort
+- rituel : 1 tour par niveau
+- scroll de niveau supérieur : jet d'INT avec la différence de niveau en malus
+
+Encombrance
+
+Backstab : max dommages x 2
