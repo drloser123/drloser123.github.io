@@ -1,5 +1,6 @@
 ---
 title: Règles maisons
+parent: Home
 layout: default
 ---
 
