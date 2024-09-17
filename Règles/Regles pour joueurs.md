@@ -34,6 +34,23 @@ Pour ressusciter un personnage, il faut :
 - 5000 PO - Guérit toutes les blessures
 - 10000 PO - Guérit toutes les blessures et soignent les maladies
 
+## Gagner des XP
+Chaque PO récupérée vous fait gagner 1/2 XP.
+
+Les autres actions permettant de gagner des XP sont :
+- Confirmer ou infirmer une rumeur +
+- Terminer une quête +++
+- Découvrir un lieu important ++
+- Déjouer un piège ou résoudre une énigme ++
+- Trouver un secret +
+- Manipuler ou incapaciter une faction à votre bénéfice +++
+- Interagir avec un PNJ à votre avantage de façon significative ++
+- Exploiter le "lore" de façon utile ou intéressante +
+- Se créer une base d'opération sécurisée ++++
+- Explorer 5 pièces de "donjon" +
+- Utiliser un skill/équipement de façon créative et utile ++
+- Surmonter un obstacle ou un danger environnemental ++
+
 ## Fatigue
 - **Mauvaise nuit** : passer une mauvaise nuit ajoute un niveau de fatigue
 - **24h de repos** : supprime tous les niveaux de fatigue
