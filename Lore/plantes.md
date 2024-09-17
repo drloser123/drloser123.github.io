@@ -1,18 +1,19 @@
 ---
 title: Plantes
-nav_order: 2
-parent: Lore
+nav_order: 20
+parent: Home
 layout: default
 ---
-
-# Plantes
 
 ## Cueillette
 Le personnage doit consacrer **4 heures à la cueillette**. Dans ce laps de temps, il peut faire 2 **recherches**, ou 4 s'il a des affinités avec la nature : barbare, druide, etc.
 
 Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque recherche, il lance 1d6 et consulte les tables ci-dessous pour savoir s'il a trouvé ce qu'il cherchait.			
 
-## Plantes commestibles
+## Liste des plantes
+
+Plantes commestibles
+{: .label .label-green }
 
 | Probabilité de trouver    | Nom              | Effet    | Goût              | Apparence                                 |
 | ------------------------- | ---------------- | -------- | ----------------- | ----------------------------------------- |
@@ -23,7 +24,8 @@ Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque reche
 | 3-sur-6                   | Feuille parasol  | 1 ration | Amer              | Feuille verte de 1 à 2 mètres de diamètre |
 | 3-sur-6                   | Gland Casse-Dent | 1 ration | Dur comme du bois | Gland noir                                |
 
-## Plantes médicinales
+Plantes médicinales
+{: .label .label-blue }
 
 | Probabilité de trouver    | Nom                  | Effet               | Effets secondaires                                                                               | Apparence                                   |
 | ------------------------- | -------------------- | ------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------- |
@@ -34,7 +36,8 @@ Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque reche
 | 1-sur-6                   | Noix trouble         | 1D6 PV/heure        | Trouble de la vision<br>Sav. vs poison ou -2 à toutes les actions nécessitant la vue pendant 24h | Noix noire                                  |
 | 2-sur-6                   | Fougère dorée        | 2D4/nuit            | Somnolence<br>Sav. vs poison ou -1 à toutes les actions le jour suivant (remète : coke-pollen)   | Grande feuilles aux reflets irisés          |
 
-## Plantes magiques
+Plantes magiques
+{: .label .label-yellow }
 
 | Probabilité de trouver    | Nom                 | Effet                                  | Effets secondaires                                                                                    | Apparence                                                                             |
 | ------------------------- | ------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -47,6 +50,9 @@ Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque reche
 
 1. Uniquement à la pleine lune
 2. Pousse uniquement sur les tombes fraiches (moins de 1 semaine) - une seule recherche possible par tombe
+
+Poisons
+{: .label .label-red }
 
 | Probabilité de trouver    | Nom                   | Effet si on rate un jet de sauvegarde | Prise                                                                    | Apparence                                   |
 | ------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------- |
