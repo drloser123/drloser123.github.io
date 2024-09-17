@@ -41,11 +41,11 @@ Pour ressusciter un personnage, il faut :
 - **Examiner :** écouter, observer...
 - **Prouesses physiques :** sauter, grimper, se contorsionner...
 
-Par défaut, lorsqu'une action est particulièrement difficile, les personnages possèdent 1-sur-6 chance de réussir. 
+Par défaut, lorsqu'une action est particulièrement difficile, les personnages possèdent 1-sur-6 chance de réussir. Si un personnage a 6-sur-6 chances de réussir et qu'il fait un suite, il doit relancer un dé avec cette fois-ci 5-sur-6 chance de réussir. Autrement dit, il échoue s'il fait deux 6 de suite.
 
 ### Compétences des classes
 
-- **Accrobate :** 3-sur-6 en Discrétion et 4-sur-6 en Prouesses physiques
+- **Accrobate :** 3-sur-6 en Discrétion et 5-sur-6 en Prouesses physiques
 - **Assassin :** 4-sur-6 en Discrétion et 3-sur-6 en Prouesses physiques
 - **Barbare :** 3-sur-6 en Discrétion et 3-sur-6 en Prouesses physiques
 - **Duergar :** 4-sur-6 en Examiner les murs et constructions, et dans les souterrains
@@ -63,7 +63,6 @@ Par défaut, lorsqu'une action est particulièrement difficile, les personnages 
 ### Modificateurs aux jets de compétences
 - **Prendre son temps :** +1 chance sur 6
 - **Utiliser des outils :** +1 chance sur 6
-
 
 ## Gagner des XP
 Chaque PO récupérée vous fait gagner 1/2 XP.
