@@ -1,7 +1,7 @@
 ---
 title: Plantes
 nav_order: 2
-parent: Home
+parent: Lore
 layout: default
 ---
 
