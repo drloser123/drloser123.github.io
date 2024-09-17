@@ -115,4 +115,4 @@ Encombrance :
 - ???
 
 Backstab : 
-- Max dommages x 2
+- Max dommages x 2 
