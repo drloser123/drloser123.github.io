@@ -13,13 +13,13 @@ Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier 
 ## Mort
 ### Tomber à 0 PV
 Quand un PJ ou un PNJ important atteint **0 PV** : 
-- il lui reste 3 rounds avant de mourir
-- il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient
+- Il lui reste 3 rounds avant de mourir
+- Il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient
 
 ### Stabiliser
 Pour stabiliser un personnage mourant, il faut :
-- utiliser une action 
-- réussir un jet de sagesse. Un personnage ne peut faire qu'une seule tentative. S'il ne possède pas de bandage, il fait son jet à -4
+- Utiliser une action 
+- Réussir un jet de sagesse. Un personnage ne peut faire qu'une seule tentative. S'il ne possède pas de bandage, il fait son jet à -4
 
 ### Ressusciter
 Pour ressusciter un personnage, il faut :
@@ -33,6 +33,37 @@ Pour ressusciter un personnage, il faut :
 - 2000 PO - 4D6+4
 - 5000 PO - Guérit toutes les blessures
 - 10000 PO - Guérit toutes les blessures et soignent les maladies
+
+## Compétences
+### Liste des compétences
+- **Bricolage :** désamorcer, crocheter...
+- **Discretion :** se cacher, se déplacer silencieusement, pick-pocket...
+- **Examiner :** écouter, observer...
+- **Prouesses physiques :** sauter, grimper, se contorsionner...
+
+Par défaut, lorsqu'une action est particulièrement difficile, les personnages possèdent 1-sur-6 chance de réussir. 
+
+### Compétences des classes
+
+- **Accrobate :** 3-sur-6 en Discrétion et 4-sur-6 en Prouesses physiques
+- **Assassin :** 4-sur-6 en Discrétion et 3-sur-6 en Prouesses physiques
+- **Barbare :** 3-sur-6 en Discrétion et 3-sur-6 en Prouesses physiques
+- **Duergar :** 4-sur-6 en Examiner les murs et constructions, et dans les souterrains
+- **Drow :** 4-sur-6 en Examiner dans les souterrains
+- **Elfe :** 3-sur-6 en Examiner
+- **Gnomes :** 4-sur-6 en Examiner les murs et constructions, et 3-sur-6 en Discréttion
+- **Halfing :** 3-sur-6 en Discrétion
+- **Nains :** 4-sur-6 en Examiner les murs et constructions
+- **Ranger :** 4-sur-6 en Examiner pour pister
+- **Semi-elfe :** 3-sur-6 en Examiner
+- **Semi-orc :**  3-sur-6 en Discrétion et 3-sur-6 en Prouesses physiques
+- **Svirfneblin :** 4-sur-6 en Examiner les murs et constructions
+- **Voleur :** 2-sur-6 dans toutes les compétences, puis 1 point à ajouter par niveau
+
+### Modificateurs aux jets de compétences
+- **Prendre son temps :** +1 chance sur 6
+- **Utiliser des outils :** +1 chance sur 6
+
 
 ## Gagner des XP
 Chaque PO récupérée vous fait gagner 1/2 XP.
