@@ -12,13 +12,16 @@ Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier 
 
 ## Mort
 ### Tomber à 0 PV
-Quand un PJ ou un PNJ important atteint **0 PV** il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné. De plus, il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient.
+Quand un PJ ou un PNJ important atteint **0 PV** il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné. Pendant ce temps, il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient.
 
 ### Stabiliser
 Pour stabiliser un personnage mourant, il faut utiliser une action et réussir un jet de sagesse. Un personnage ne peut faire qu'une seule tentative. S'il ne possède pas de bandage, il fait son jet à -4.
 
 ### Ressusciter
 Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de niveau 7, puis faire une offrande égale au nombres d'XP actuels du personnage décédé.
+
+## Dégâts explosifs
+Toutes les armes font des "dégâts explosifs" : chaque fois qu'on fait le résultat maximal sur le dé de dommages, on le relance et on ajoute le résultat. Par exemple, une dague fait 1D4 points de dégâts. Si on fait un 4, on relance le dé et on rajoute le résultat.
 
 ## Prix des potions de soin
 - 250 PO - 1D6+1
