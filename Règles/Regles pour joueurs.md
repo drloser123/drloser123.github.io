@@ -183,5 +183,11 @@ Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci
 19. plume & encre
 20. clochette
 
-## Encombrance :
-- ???
+## Encombrement :
+La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte et du fait qu’il transporte ou non un trésor conséquent (à la discrétion de l’arbitre).
+
+| Armure portée | Sans trésor | Avec trésor |
+| ------------- | ----------- | ----------- |
+| Sans armure   | 36 m (12 m) | 27 m (9 m)  |
+| Armure légère | 27 m (9 m)  | 18 m (6 m)  |
+| Armure lourde | 18 m (6 m)  | 9 m (3 m)   |
