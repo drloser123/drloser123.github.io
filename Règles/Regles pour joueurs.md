@@ -7,6 +7,12 @@ layout: default
 
 1. TOC
 {:toc}
+
+## Points de vie
+Au niveau 1, si le dé de vie n'est pas égal à la moyenne (arrondie à l'inférieur), alors on considère que le résultat est égal à la moyenne.
+
+Lorsqu'un personnage gagne un niveau, on relance tous ses dés de vie. Si le résultat est inférieur ou égal à ses points de vie actuels, alors le personnage gagne un point de vie.
+
 ## Sacrifier un bouclier
 Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier pour absorber un coup.
 
@@ -36,7 +42,28 @@ Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On
 - 5000 PO - Guérit toutes les blessures
 - 10000 PO - Guérit toutes les blessures et soignent les maladies
 
-## Compétences
+## Magie 
+On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, nécromants, etc.).
+
+Les lanceurs de sorts débutent avec 3 sorts connus et peuvent lire les ouvrages correspondant à la magie qu'il maîtrise : arcanique ou divine.
+
+Les pratiquants de magie arcanique peuvent :
+- détecter la magie en se concentrant pendant 1 tour
+- identifier un objet magique en l'étudiant 3 heures puis en faisant 3 ou moins sur 1D6
+- apprendre un sort auprès d'un mentor, d'un parchemin, d'un grimoire : ça nécessite 1 jour par niveau de sort
+- apprendre ou inventer un sort seul : ça nécessite 1 mois et 1000 PO par niveau de sort
+- faire un rituel durant 1 tour par niveau de sort pour lancer un sort sans perdre son emplacement
+- utiliser un parchemin de niveau supérieur à condition de réussir un jet d'intelligence avec le nombre de niveau manquant en malus. Sur un échec, le résultat est généralement désastreux.
+
+## Compétences des classes - règle sans score
+
+Il n'y a plus de compétences. Pour savoir si une action difficile est réussie, le MJ détermine sa difficulté sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat le plus bas quand l'action se trouve dans leur domaine de compétence.
+
+Modificateurs :
+- **Prendre son temps :** +1 chance sur 6
+- **Utiliser des outils :** +1 chance sur 6
+
+## Compétences - règle avec score
 ### Liste des compétences
 - **Bricolage :** désamorcer, crocheter...
 - **Discretion :** se cacher, se déplacer silencieusement, pick-pocket...
@@ -63,14 +90,6 @@ Par défaut, lorsqu'une action est particulièrement difficile, les personnages 
 - **Voleur :** 2-sur-6 dans toutes les compétences, puis 1 point à ajouter par niveau
 
 ### Modificateurs aux jets de compétences
-- **Prendre son temps :** +1 chance sur 6
-- **Utiliser des outils :** +1 chance sur 6
-
-## Compétences des classes - règle sans score
-
-Il n'y a plus de compétences. Pour savoir si une action difficile est réussie, le MJ détermine sa difficulté sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat le plus bas quand l'action se trouve dans leur domaine de compétence.
-
-Modificateurs :
 - **Prendre son temps :** +1 chance sur 6
 - **Utiliser des outils :** +1 chance sur 6
 
@@ -159,23 +178,5 @@ Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci
 19. plume & encre
 20. clochette
 
-## Points de vie
-Au niveau 1, si le dé de vie n'est pas égal à la moyenne (arrondie à l'inférieur), alors on considère que le résultat est égal à la moyenne.
-
-Lorsqu'un personnage gagne un niveau, on relance tous ses dés de vie. Si le résultat est inférieur ou égal à ses points de vie actuels, alors le personnage gagne un point de vie.
-
-## Magie 
-On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, nécromants, etc.).
-
-Les lanceurs de sorts débutent avec 3 sorts connus et peuvent lire les ouvrages correspondant à la magie qu'il maîtrise : arcanique ou divine.
-
-Les pratiquants de magie arcanique peuvent :
-- détecter la magie en se concentrant pendant 1 tour
-- identifier un objet magique en l'étudiant 3 heures puis en faisant 3 ou moins sur 1D6
-- apprendre un sort auprès d'un mentor, d'un parchemin, d'un grimoire : ça nécessite 1 jour par niveau de sort
-- apprendre ou inventer un sort seul : ça nécessite 1 mois et 1000 PO par niveau de sort
-- faire un rituel durant 1 tour par niveau de sort pour lancer un sort sans perdre son emplacement
-- utiliser un parchemin de niveau supérieur à condition de réussir un jet d'intelligence avec le nombre de niveau manquant en malus. Sur un échec, le résultat est généralement désastreux.
-
-Encombrance :
+## Encombrance :
 - ???
