@@ -54,13 +54,18 @@ Par défaut, lorsqu'une action est particulièrement difficile, les personnages 
 - **Svirfneblin :** 4-sur-6 en Examiner les murs et constructions
 - **Voleur :** 2-sur-6 dans toutes les compétences, puis 1 point à ajouter par niveau
 
-### Compétences des classes - règles sans score
-
-Toutes les compétences disparaissent. Pour savoir si une action difficile est réussie, le MJ détermine sa difficulté sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat plus bas quand l'action se trouve dans leur domaine de compétence.
-
 ### Modificateurs aux jets de compétences
 - **Prendre son temps :** +1 chance sur 6
 - **Utiliser des outils :** +1 chance sur 6
+
+## Compétences des classes - règles sans score
+
+Toutes les compétences disparaissent. Pour savoir si une action difficile est réussie, le MJ détermine sa difficulté sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat plus bas quand l'action se trouve dans leur domaine de compétence.
+
+Modificateurs :
+- **Prendre son temps :** +1 chance sur 6
+- **Utiliser des outils :** +1 chance sur 6
+
 
 ## Gagner des XP
 Chaque PO récupérée fait gagner 1/2 XP.
