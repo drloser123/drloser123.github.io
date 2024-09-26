@@ -21,7 +21,9 @@ Pour stabiliser un personnage mourant, il faut utiliser une action et réussir u
 Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de niveau 7, puis faire une offrande égale au nombres d'XP actuels du personnage décédé.
 
 ## Dégâts explosifs
-Toutes les armes font des "dégâts explosifs" : chaque fois qu'on fait le résultat maximal sur le dé de dommages, on le relance et on ajoute le résultat. Par exemple, une dague fait 1D4 points de dégâts. Si on fait un 4, on relance le dé et on rajoute le résultat.
+Toutes les armes font des "dégâts explosifs" : chaque fois qu'on fait le résultat maximal sur le dé de dégâts, on le relance et on ajoute le résultat. 
+
+Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On fait 4, donc on relance 1D4. On refait 4, donc on relance un 3e D4. On fait 2. Les dégâts sont donc de 4+4+2=10.
 
 ## Prix des potions de soin
 - 250 PO - 1D6+1
