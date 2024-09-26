@@ -66,7 +66,6 @@ Modificateurs :
 - **Prendre son temps :** +1 chance sur 6
 - **Utiliser des outils :** +1 chance sur 6
 
-
 ## Gagner des XP
 Chaque PO récupérée fait gagner 1/2 XP.
 
