@@ -61,9 +61,9 @@ Par défaut, lorsqu'une action est particulièrement difficile, les personnages 
 - **Prendre son temps :** +1 chance sur 6
 - **Utiliser des outils :** +1 chance sur 6
 
-## Compétences des classes - règles sans score
+## Compétences des classes - règle sans score
 
-Toutes les compétences disparaissent. Pour savoir si une action difficile est réussie, le MJ détermine sa difficulté sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat plus bas quand l'action se trouve dans leur domaine de compétence.
+Il n'y a plus de compétences. Pour savoir si une action difficile est réussie, le MJ détermine sa difficulté sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat le plus bas quand l'action se trouve dans leur domaine de compétence.
 
 Modificateurs :
 - **Prendre son temps :** +1 chance sur 6
