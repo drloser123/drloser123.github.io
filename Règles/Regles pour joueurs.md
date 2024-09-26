@@ -23,6 +23,9 @@ Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de
 ## Dégâts explosifs
 Toutes les armes font des "dégâts explosifs" : chaque fois qu'on fait le résultat maximal sur le dé de dégâts, on le relance et on ajoute le résultat. 
 
+## Backstab / attaque dans le dos
+Pour les classes capables de faire des backstabs : on considère que le jet de dé fait toujours le résultat maximum. On relance le relance donc au moins une fois. Cf. "dégâts explosifs" ci-dessus.
+
 Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On fait 4, donc on relance 1D4. On refait 4, donc on relance encore 1D4. On fait 2. Les dégâts sont donc de 4+4+2=10.
 
 ## Prix des potions de soin
@@ -109,23 +112,70 @@ Les autres actions permettant de gagner des XP sont :
 ### Marche forcée
 +50% de distance. Nécessite 1 jour de repos, sinon ajoute un niveau de fatigue.
 
-## A FAIRE
-PV :
+## Objets de départ
+Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci-dessous :
 
-- PV au niveau 1 = au minimum la moyenne du dé
-- Au delà on relance le DV. Si on fait un score < à celui actuel, on gagne 1
+Équipements divers 1
+1. vessie
+2. piège à ours
+3. pelle
+4. soufflet
+5. graisse
+6. scie
+7. seau
+8. pieds-de-biche
+9. ciseau
+11. hameçon
+12. billes
+13. glue
+14. pioche
+15. sablier
+10. chignole
+16. filet
+17. pincettes
+18. crochets
+19. lime
+20. clous
 
-Magie : 
-- on débute avec 3 sorts + lecture de la magie
-- détection de la magien innée en se concentrant 1 tour
-- 3-sur-6 d'identifier un objet magique
-- apprentissage avec une base (mentor, scroll ou livre) : 1 jour par niveau de sort
-- apprentissage à partir de rien : 1 jour et 1000 PO par niveau de sort
-- rituel : 1 tour par niveau
-- scroll de niveau supérieur : jet d'INT avec la différence de niveau en malus
+Équipements divers 2
+1. encens
+2. éponge
+3. lentille grossissante
+4. parfum
+5. corne
+6. bouteille
+7. savon
+8. longue-vue
+9. pot de goudron
+10. ficelle
+11. faux bijoux
+12. livre, vierge
+13. jeu de cartes
+14. dés
+15. gamelle
+16. pigments corporels
+17. sifflet
+18. instrument
+19. plume & encre
+20. clochette
+
+## Points de vie
+Au niveau 1, si le dé de vie n'est pas égal à la moyenne (arrondie à l'inférieur), alors on considère que le résultat est égal à la moyenne.
+
+Lorsqu'un personnage gagne un niveau, on relance tous ses dés de vie. Si le résultat est inférieur ou égal à ses points de vie actuels, alors le personnage gagne un point de vie.
+
+## Magie 
+On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, nécromants, etc.).
+
+Les lanceurs de sorts débutent avec 3 sorts connus et peuvent lire les ouvrages correspondant à la magie qu'il maîtrise : arcanique ou divine.
+
+Les pratiquants de magie arcanique peuvent :
+- détecter la magie en se concentrant pendant 1 tour
+- identifier un objet magique en l'étudiant 3 heures puis en faisant 3 ou moins sur 1D6
+- apprendre un sort auprès d'un mentor, d'un parchemin, d'un grimoire : ça nécessite 1 jour par niveau de sort
+- apprendre ou inventer un sort seul : ça nécessite 1 mois et 1000 PO par niveau de sort
+- faire un rituel durant 1 tour par niveau de sort pour lancer un sort sans perdre son emplacement
+- utiliser un parchemin de niveau supérieur à condition de réussir un jet d'intelligence avec le nombre de niveau manquant en malus. Sur un échec, le résultat est généralement désastreux.
 
 Encombrance :
 - ???
-
-Backstab : 
-- Max dommages x 2 
