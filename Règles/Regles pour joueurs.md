@@ -42,18 +42,23 @@ Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On
 - 5000 PO - Guérit toutes les blessures
 - 10000 PO - Guérit toutes les blessures et soignent les maladies
 
-## Magie 
+## Magie
 On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, nécromants, etc.).
 
-Les lanceurs de sorts débutent avec 3 sorts connus et peuvent lire les ouvrages correspondant à la magie qu'il maîtrise : arcanique ou divine.
+Tous les utilisateurs de magie peuvent :
+- lire les ouvrages correspondant à la magie qu'ils pratiquent
+- détecter la magie en se concentrant pendant 1 tour
+- faire un rituel durant 1 tour par niveau de sort pour lancer sans le perdre un sort qu'ils ont mémorisé
+- utiliser un parchemin de niveau supérieur au leur, à condition de réussir un jet d'attribut (intelligence pour la magie arcanique, sagesse pour la magie divine) avec le nombre de niveaux manquants en malus. Sur un échec, le résultat est généralement désastreux
+
+Les utilisateurs de magie divine connaissent tous les sorts de leur liste de sorts.
+
+Les utilisateurs de magie arcanique débutent en connaissant 3 sorts de niveau 1.
 
 Les pratiquants de magie arcanique peuvent :
-- détecter la magie en se concentrant pendant 1 tour
-- identifier un objet magique en l'étudiant 3 heures puis en faisant 3 ou moins sur 1D6
-- apprendre un sort auprès d'un mentor, d'un parchemin, d'un grimoire : ça nécessite 1 jour par niveau de sort
-- apprendre ou inventer un sort seul : ça nécessite 1 mois et 1000 PO par niveau de sort
-- faire un rituel durant 1 tour par niveau de sort pour lancer un sort sans perdre son emplacement
-- utiliser un parchemin de niveau supérieur à condition de réussir un jet d'intelligence avec le nombre de niveau manquant en malus. Sur un échec, le résultat est généralement désastreux.
+- identifier un objet magique en l'étudiant 3 heures. Ils ont alors 3-sur-6 chances de réussir à déterminer ses effets
+- apprendre un sort auprès d'un mentor, d'un parchemin ou d'un grimoire : ça nécessite 1 jour par niveau de sort
+- apprendre ou inventer un sort seul : ça nécessite 1 semaine et 1000 PO par niveau de sort
 
 ## Compétences des classes - règle sans score
 
