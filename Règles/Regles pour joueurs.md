@@ -23,7 +23,7 @@ Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de
 ## Dégâts explosifs
 Toutes les armes font des "dégâts explosifs" : chaque fois qu'on fait le résultat maximal sur le dé de dégâts, on le relance et on ajoute le résultat. 
 
-Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On fait 4, donc on relance 1D4. On refait 4, donc on relance un 3e D4. On fait 2. Les dégâts sont donc de 4+4+2=10.
+Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On fait 4, donc on relance 1D4. On refait 4, donc on relance encore 1D4. On fait 2. Les dégâts sont donc de 4+4+2=10.
 
 ## Prix des potions de soin
 - 250 PO - 1D6+1
