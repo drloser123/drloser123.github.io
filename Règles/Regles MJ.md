@@ -52,4 +52,4 @@ Jusq'au niveau 7, le bonus au toucher est égal au nombre de HD-1. Ou égale au 
 - Les spectres, vampires et autres morts-vivants majeurs drainent 2D4 de constitution.
 - Les ombres draines 1D5 de force.
 
-Un personnage qui atteint 0 devient un mort-vivant similaire à celui qui l'a drainé. Sinon, les points perdus sont restaurés au rythme de 1 par jour.
+Un personnage dont un score atteint 0 devient un mort-vivant similaire à celui qui l'a drainé. Sinon, les points perdus sont restaurés au rythme de 1 par jour.
