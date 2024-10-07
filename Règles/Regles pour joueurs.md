@@ -75,7 +75,9 @@ Modificateurs :
 - **Examiner :** écouter, observer...
 - **Prouesses physiques :** sauter, grimper, se contorsionner...
 
-Par défaut, lorsqu'une action est particulièrement difficile, les personnages possèdent 1-sur-6 chance de réussir. Si un personnage a 6-sur-6 chances de réussir et qu'il fait un 6, il doit relancer un dé avec cette fois-ci 5-sur-6 chances de réussir. Autrement dit, il échoue s'il fait deux 6 de suite.
+Par défaut, lorsqu'une action est particulièrement difficile, un personnage possède 1-sur-6 chance de réussir. S'il est compétent, il possède davantage de chances, voir chapitre suivant.
+
+Si un personnage a 6-sur-6 chances de réussir, il lance 2D6 et échoue uniquement sur un double 6.
 
 ### Compétences des classes
 
