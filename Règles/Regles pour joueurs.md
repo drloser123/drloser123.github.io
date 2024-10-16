@@ -121,45 +121,7 @@ Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci
 (1) vessie, (2) piège à ours, (3) pelle, (4) soufflet, (5) graisse, (6) scie, (7) seau, (8) pieds-de-biche, (9) ciseau, (11) hameçon, (12) billes, (13) glue, (14) pioche, (15) sablier, (10) chignole, (16) filet, (17) pincettes, (18) crochets, (19) lime, (20) clous.
 
 ### Équipements divers 2
-1. encens
-2. éponge
-3. lentille grossissante
-4. parfum
-5. corne
-6. bouteille
-7. savon
-8. longue-vue
-9. pot de goudron
-10. ficelle
-11. faux bijoux
-12. livre, vierge
-13. jeu de cartes
-14. dés
-15. gamelle
-16. pigments corporels
-17. sifflet
-18. instrument
-19. plume & encre
-20. clochette
+(1) encens, (2) éponge, (3) lentille grossissante, (4) parfum, (5) corne, (6) bouteille, (7) savon, (8) longue-vue, (9) pot de goudron, (10) ficelle, (11) faux bijoux, (12) livre, vierge, (13) jeu de cartes, (14) dés, (15) gamelle, (16) pigments corporels, (17) sifflet, (18) instrument, (19) plume & encre, (20) clochette.
 
 ### Équipements divers 3
-1. périscope télescopique fragile
-2. livre d'images errotiques
-3. trois chatons dans un panier
-4. pelote de laine et aiguilles à tricoter
-5. dague rétractable
-6. 10 boules puantes
-7. 12 pétards
-8. dents en or dans une bourse (50 PO)
-9. sarbacane et 10 flèchettes imbibée de somnifère
-10. collier d'oreilles de gobelin
-11. rat apprivoisé
-12. vêtement de la dernière mode
-13. main de bébé momifiée au bout d'une chaîne en argent
-14. grande éponge naturelle et savon
-15. corbeau blanc apprivoisé
-16. 5 m de fil de fer barbelé
-17. patte de lapin porte-bonheur (+1 à un jet une fois par jour)
-18. théière et thé
-19. paire de menottes
-20. boussole dans une boîte en bois volumineuse
+(1) périscope télescopique fragile, (2) livre d’images érotiques, (3) trois chatons dans un panier, (4) pelote de laine et aiguilles à tricoter, (5) dague rétractable, (6) 10 boules puantes, (7) 12 pétards, (8) dents en or dans une bourse (50 PO), (9) sarbacane et 10 fléchettes imbibées de somnifère, (10) collier d’oreilles de gobelin, (11) rat apprivoisé, (12) vêtement de la dernière mode, (13) main de bébé momifiée au bout d’une chaîne en argent, (14) grande éponge naturelle et savon, (15) corbeau blanc apprivoisé, (16) 5 m de fil de fer barbelé, (17) patte de lapin porte-bonheur (+1 à un jet une fois par jour), (18) théière et thé, (19) paire de menottes, (20) boussole dans une boîte en bois volumineuse.
