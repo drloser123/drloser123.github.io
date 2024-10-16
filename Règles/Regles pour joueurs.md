@@ -117,29 +117,10 @@ La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte
 ## Objets de départ
 Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci-dessous :
 
-Équipements divers 1
-1. vessie
-2. piège à ours
-3. pelle
-4. soufflet
-5. graisse
-6. scie
-7. seau
-8. pieds-de-biche
-9. ciseau
-11. hameçon
-12. billes
-13. glue
-14. pioche
-15. sablier
-10. chignole
-16. filet
-17. pincettes
-18. crochets
-19. lime
-20. clous
+### Équipements divers 1
+(1) vessie, (2) piège à ours, (3) pelle, (4) soufflet, (5) graisse, (6) scie, (7) seau, (8) pieds-de-biche, (9) ciseau, (11) hameçon, (12) billes, (13) glue, (14) pioche, (15) sablier, (10) chignole, (16) filet, (17) pincettes, (18) crochets, (19) lime, (20) clous.
 
-Équipements divers 2
+### Équipements divers 2
 1. encens
 2. éponge
 3. lentille grossissante
@@ -161,7 +142,7 @@ Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci
 19. plume & encre
 20. clochette
 
-Équipements divers 3
+### Équipements divers 3
 1. périscope télescopique fragile
 2. livre d'images errotiques
 3. trois chatons dans un panier
