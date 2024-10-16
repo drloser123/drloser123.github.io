@@ -1,5 +1,5 @@
 ---
-title: Règles pour les joueurs
+title: Règles non appliqués
 nav_order: 10
 parent: OSR
 layout: default
@@ -7,6 +7,8 @@ layout: default
 
 1. TOC
 {:toc}
+
+Des règles que je n'applique pas, mais que je garde dans un coin.
 
 ## Compétences - règle avec score
 ### Liste des compétences
