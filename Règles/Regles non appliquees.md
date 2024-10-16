@@ -1,6 +1,6 @@
 ---
 title: Règles non appliqués
-nav_order: 10
+nav_order: 99
 parent: OSR
 layout: default
 ---
