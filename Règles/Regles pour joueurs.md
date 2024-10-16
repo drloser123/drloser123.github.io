@@ -60,8 +60,8 @@ Les pratiquants de magie arcanique peuvent :
 - apprendre un sort auprès d'un mentor, d'un parchemin ou d'un grimoire : ça nécessite 1 jour par niveau de sort
 - apprendre ou inventer un sort seul : ça nécessite 1 semaine et 1000 PO par niveau de sort
 
-## Compétences des classes - règle sans score
-Il n'y a plus de compétences. Pour savoir si une action difficile est réussie, le MJ détermine les chances de réussite sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Les classes permettent de lancer 2D6 et de choisir le résultat le plus bas quand l'action se trouve dans leur domaine de compétence.
+## Jets de compétences
+Les personnages n'ont pas de liste de compétences. Pour savoir si une action difficile est réussie, le MJ détermine les chances de réussite sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Si l'action se situe dans le domaine de compétence de la classe du personnage, le joueur lance 2D6 et choisit le résultat le plus bas.
 
 Modificateurs :
 - **Prendre son temps :** +1 chance sur 6
@@ -91,7 +91,16 @@ Les autres actions permettant de gagner des XP sont :
 - **24h de repos** : supprime tous les niveaux de fatigue
 - **Fatigue** : -1 à tous les jets par niveau
 
-## Vitesse de déplacement à pieds
+## Vitesse de déplacement lors des combats (encombrement)
+La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte et du fait qu’il transporte ou non un trésor conséquent (à la discrétion du MJ).
+
+| Armure portée | Sans trésor | Avec trésor |
+| ------------- | ----------- | ----------- |
+| Sans armure   | 36 m (12 m) | 27 m (9 m)  |
+| Armure légère | 27 m (9 m)  | 18 m (6 m)  |
+| Armure lourde | 18 m (6 m)  | 9 m (3 m)   |
+
+## Vitesse de déplacement à pieds lors des voyages
 ### En fonction de l'armure
 - **Sans armure** : 30 à 40Km/jour (5Km/h) => 1 hexagone en 2h
 - **Légère** : 2/3 vitesse => 1 hex en 3h
@@ -173,14 +182,3 @@ Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci
 18. théière et thé
 19. paire de menottes
 20. boussole dans une boîte en bois volumineuse
-
-
-
-## Encombrement :
-La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte et du fait qu’il transporte ou non un trésor conséquent (à la discrétion de l’arbitre).
-
-| Armure portée | Sans trésor | Avec trésor |
-| ------------- | ----------- | ----------- |
-| Sans armure   | 36 m (12 m) | 27 m (9 m)  |
-| Armure légère | 27 m (9 m)  | 18 m (6 m)  |
-| Armure lourde | 18 m (6 m)  | 9 m (3 m)   |
