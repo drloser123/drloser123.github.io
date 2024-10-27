@@ -34,6 +34,9 @@ Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On
 ## Backstab / attaque dans le dos
 Pour les classes capables de faire des backstabs, on considère que le dés de dégâts fait toujours le résultat maximum. On le relance donc au moins une fois. Cf. "dégâts explosifs" ci-dessus.
 
+## Critique
+Sur un 20 naturel, on considère que le dés de dégâts fait toujours le résultat maximum. On le relance donc au moins une fois. Cf. "dégâts explosifs" ci-dessus.
+
 ## Prix des potions de soin
 - 250 PO - 1D6+1
 - 500 PO - 2D6+2
