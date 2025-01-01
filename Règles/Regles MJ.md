@@ -28,9 +28,9 @@ Jusq'au niveau 7, le bonus au toucher est égal au nombre de HD-1. Ou égale au 
 - 19+ à 21 : +13 
 - 21+ et au delà : +14 
 
-## Classe d'armue ascendante
+## Classe d'armure ascendante
 
-CA ascendate = 19-CA
+CA ascendate = 19 - CA descendante
 
 ## Jet de sauvegarde des monstres & PNJ
 
