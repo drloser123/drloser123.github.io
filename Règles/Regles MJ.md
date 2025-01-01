@@ -9,7 +9,7 @@ layout: default
 {:toc}
 
 ## Bonus au toucher des monstres & PNJ
-Jusq'au niveau 7, le bonus au toucher est égal au nombre de HD-1. Ou égale au HD s'il y a une astestisque.
+Jusq'au niveau 7, le bonus au toucher est égal au nombre de HD-1. Ou égale au HD s'il y a une asterisque.
 
 - Humain normal : -1
 - Jusqu’à 1 : 0
@@ -27,6 +27,10 @@ Jusq'au niveau 7, le bonus au toucher est égal au nombre de HD-1. Ou égale au 
 - 17+ à 19 : +12 
 - 19+ à 21 : +13 
 - 21+ et au delà : +14 
+
+## Classe d'armue ascendante
+
+CA ascendate = 19-CA
 
 ## Jet de sauvegarde des monstres & PNJ
 
