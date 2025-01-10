@@ -16,6 +16,12 @@ Lorsqu'un personnage gagne un niveau, on relance tous ses dés de vie. Si le ré
 ## Sacrifier un bouclier
 Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier pour absorber un coup.
 
+## Attaques groupées
+Les ennemis peuvent grouper leurs attaques : +1 pour toucher et +2 au dommage par créature en plus de la première, jusqu'à un maximum de +3/+6. Par exemple, 4 gobelins qui attaquent ensemble, au lieu de faire 4 attaque à +0 et 1D6 de dommage, on fait une seule attaque à +3, et 1D6+6 de dommages.
+
+## Attaques supplémentaires
+Les classes martiales (guerrier, paladin, chevalier, etc.) gagnent 1 attaque supplémentaire par niveau, mais uniquement contre les créatures avec 1DV ou moins.
+
 ## Mort
 ### Tomber à 0 PV
 Quand un PJ ou un PNJ important atteint **0 PV** il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné. Pendant ce temps, il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient.
