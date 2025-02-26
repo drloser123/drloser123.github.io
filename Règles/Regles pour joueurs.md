@@ -32,16 +32,8 @@ Pour stabiliser un personnage mourant, il faut utiliser une action. Les chances 
 ### Ressusciter
 Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de niveau 7, puis faire une offrande égale au nombres d'XP actuels du personnage décédé.
 
-## Dégâts explosifs
-Toutes les armes font des "dégâts explosifs" : chaque fois qu'on fait le résultat maximal sur le dé de dégâts, on le relance et on ajoute le résultat. 
-
-Exemple : on lance 1D4 pour savoir combien un coup de dague fait de dégâts. On fait 4, donc on relance 1D4. On refait 4, donc on relance encore 1D4. On fait 2. Les dégâts sont donc de 4+4+2=10.
-
-## Backstab / attaque dans le dos
-Pour les classes capables de faire des backstabs, on considère que le dés de dégâts fait toujours le résultat maximum. On le relance donc au moins une fois. Cf. "dégâts explosifs" ci-dessus.
-
 ## Critique
-Sur un 20 naturel, on considère que le dés de dégâts fait toujours le résultat maximum. On le relance donc au moins une fois. Cf. "dégâts explosifs" ci-dessus.
+Sur un 20 naturel, le joueur a le choix entre (1) lancer deux fois les dommages ou (2) réaliser une manœuvre. Quelques exemples de manœuvres : désarmer, faire chuter, etc.
 
 ## Prix des potions de soin
 - 250 PO - 1D6+1
@@ -57,7 +49,7 @@ On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, néc
 Tous les utilisateurs de magie peuvent :
 - lire les ouvrages correspondant à la magie qu'ils pratiquent
 - détecter la magie en se concentrant pendant 1 tour
-- faire un rituel durant 1 tour par niveau de sort pour lancer sans le perdre un sort qu'ils ont mémorisé
+- faire un rituel pour lancer sans le perdre un sort qu'ils ont mémorisé ; le rituel dure 1 tour et coûte 1 HP par niveau de sort
 - utiliser un parchemin de niveau supérieur au leur, à condition de réussir un jet d'attribut (intelligence pour la magie arcanique, sagesse pour la magie divine) avec le nombre de niveaux manquants en malus. Sur un échec, le résultat est généralement désastreux
 
 Les utilisateurs de magie divine connaissent tous les sorts de leur liste de sorts.
@@ -76,7 +68,7 @@ Modificateurs :
 - **Prendre son temps :** +1 chance sur 6
 - **Utiliser des outils :** +1 chance sur 6
 
-## Gagner des XP
+## Gagner des XP (optionnel)
 Chaque PO récupérée fait gagner 1/2 XP.
 
 Les autres actions permettant de gagner des XP sont :
