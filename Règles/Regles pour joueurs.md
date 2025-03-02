@@ -49,12 +49,12 @@ On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, néc
 Tous les utilisateurs de magie peuvent :
 - lire les ouvrages correspondant à la magie qu'ils pratiquent
 - détecter la magie en se concentrant pendant 1 tour
-- faire un rituel pour lancer sans le perdre un sort qu'ils ont mémorisé ; le rituel dure 1 tour et coûte 1 HP par niveau de sort
+- faire un rituel pour lancer sans le perdre un sort qu'ils ont mémorisé : le rituel nécessite 1 tour de préparation par niveau de sort, et fait perdre au lanceur 1 PV par niveau de sort
 - utiliser un parchemin de niveau supérieur au leur, à condition de réussir un jet d'attribut (intelligence pour la magie arcanique, sagesse pour la magie divine) avec le nombre de niveaux manquants en malus. Sur un échec, le résultat est généralement désastreux
 
 Les utilisateurs de magie divine connaissent tous les sorts de leur liste de sorts.
 
-Les utilisateurs de magie arcanique débutent en connaissant 3 sorts de niveau 1.
+Les utilisateurs de magie arcanique débutent en connaissant 3 sorts de niveau 1. Notez qu'au niveau 1, ils ne peuvent en mémoriser qu'un seul par jour.
 
 Les pratiquants de magie arcanique peuvent :
 - identifier un objet magique en l'étudiant 3 heures. Ils ont alors 3-sur-6 chances de réussir à déterminer ses effets
