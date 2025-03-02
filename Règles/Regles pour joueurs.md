@@ -33,7 +33,7 @@ Pour stabiliser un personnage mourant, il faut utiliser une action. Les chances 
 Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de niveau 7, puis faire une offrande égale au nombres d'XP actuels du personnage décédé.
 
 ## Critique
-Sur un 20 naturel, le joueur a le choix entre (1) lancer deux fois les dommages ou (2) réaliser une manœuvre. Quelques exemples de manœuvres : désarmer, faire chuter, etc.
+Sur un 20 naturel, le joueur a le choix entre (1) lancer deux fois les dommages ou (2) réaliser une manœuvre en plus des dommages normaux. Quelques exemples de manœuvres : désarmer, faire chuter, détruire le bouclier, faire une deuxième attaque, etc.
 
 ## Prix des potions de soin
 - 250 PO - 1D6+1
