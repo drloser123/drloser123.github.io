@@ -1,9 +1,17 @@
 ---
-title: Plantes
+title: Plantes et potions de soin
 nav_order: 20
 parent: OSR
 layout: default
 ---
+
+## Prix des potions de soin
+- 250 PO - 1D6+1
+- 500 PO - 2D6+2
+- 1000 PO - 3D6+3
+- 2000 PO - 4D6+4
+- 5000 PO - Guérit toutes les blessures
+- 10000 PO - Guérit toutes les blessures et soignent les maladies
 
 ## Cueillette
 Le personnage doit consacrer **4 heures à la cueillette**. Dans ce laps de temps, il peut faire 2 **recherches**, ou 4 s'il a des affinités avec la nature : barbare, druide, etc.
