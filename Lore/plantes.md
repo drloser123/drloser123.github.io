@@ -7,10 +7,10 @@ layout: default
 
 ## Prix des potions de soin
 Les effets sont instantanés
-- 250 PO - 1D6+1
-- 500 PO - 2D6+2
-- 1000 PO - 3D6+3
-- 2000 PO - 4D6+4
+- 250 PO - récupère 1D6+1 PV
+- 500 PO - 2D6+2 PV
+- 1000 PO - 3D6+3 PV
+- 2000 PO - 4D6+4 PV
 - 5000 PO - Guérit toutes les blessures
 - 10000 PO - Guérit toutes les blessures et soignent les maladies
 
