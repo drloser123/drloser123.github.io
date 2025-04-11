@@ -6,6 +6,7 @@ layout: default
 ---
 
 ## Prix des potions de soin
+Les effets sont instantanés
 - 250 PO - 1D6+1
 - 500 PO - 2D6+2
 - 1000 PO - 3D6+3
