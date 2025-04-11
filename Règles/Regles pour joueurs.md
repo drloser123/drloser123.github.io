@@ -92,6 +92,7 @@ La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte
 | Sans armure   | 36 m (12 m / 40') | 27 m (9 m / 30')  |
 | Armure légère | 27 m (9 m / 30')  | 18 m (6 m / 20')  |
 | Armure lourde | 18 m (6 m / 20')  | 9 m (3 m / 10')   |
+La vitesse indiquée entre parenthèses est celle utilisée en combat.
 
 ## Vitesse de déplacement à pieds lors des voyages
 ### En fonction de l'armure
