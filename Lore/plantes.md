@@ -15,9 +15,9 @@ Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque reche
 Plantes commestibles
 {: .label .label-green }
 
-| Probabilité de trouver    | Nom              | Effet    | Goût              | Apparence                                 |
+| Probabilité de trouver / coût   | Nom              | Effet    | Goût              | Apparence                                 |
 | ------------------------- | ---------------- | -------- | ----------------- | ----------------------------------------- |
-| 4-sur-6                   | Herbe à pélerin  | 1 ration | Insipide          | Graminée semblable au blé                 |
+| 4-sur-6 / 1 PA                  | Herbe à pélerin  | 1 ration | Insipide          | Graminée semblable au blé                 |
 | 2-sur-6                   | Racine de Boba   | 1 ration | Épicé             | Espèce de patate bleue                    |
 | 2-sur-6                   | Baies citronées  | 1 ration | Acide             | Petites baies jaunes                      |
 | 3-sur-6                   | Fruit du Loumpa  | 1 ration | Sucré             | Gros comme une pastèque, sent le fromage  |
