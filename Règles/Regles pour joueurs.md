@@ -51,7 +51,7 @@ Les utilisateurs de magie arcanique débutent en connaissant 3 sorts de niveau 1
 Les pratiquants de magie arcanique peuvent :
 - identifier un objet magique en l'étudiant 3 heures. Ils ont alors 3-sur-6 chances de réussir à déterminer ses effets
 - apprendre un sort auprès d'un mentor, d'un parchemin ou d'un grimoire : ça nécessite 1 jour par niveau de sort
-- apprendre ou inventer un sort seul : ça nécessite 1 semaine et 1000 PO par niveau de sort
+- apprendre ou inventer un sort seul : ça nécessite 1 semaine et 1000&nbsp;PO par niveau de sort
 
 ## Jets de compétences
 Les personnages n'ont pas de liste de compétences. Pour savoir si une action difficile est réussie, le MJ détermine les chances de réussite sur 6, puis le joueur lance 1D6 et doit obtenir un résultat inférieur ou égal à la difficulté. Si l'action se situe dans le domaine de compétence de la classe du personnage, le joueur lance 2D6 et choisit le résultat le plus bas.
@@ -61,7 +61,7 @@ Modificateurs :
 - **Utiliser des outils :** +1 chance sur 6
 
 ## Gagner des XP (optionnel)
-Chaque PO récupérée fait gagner 1/2 XP.
+Chaque&nbsp;PO récupérée fait gagner 1/2 XP.
 
 Les autres actions permettant de gagner des XP sont :
 - Confirmer ou infirmer une rumeur +
@@ -117,4 +117,4 @@ Lors de la création de votre personnage, lancez 1D20 dans chacune des tables ci
 (1) encens, (2) éponge, (3) lentille grossissante, (4) parfum, (5) corne, (6) bouteille, (7) savon, (8) longue-vue, (9) pot de goudron, (10) ficelle, (11) faux bijoux, (12) livre, vierge, (13) jeu de cartes, (14) dés, (15) gamelle, (16) pigments corporels, (17) sifflet, (18) instrument, (19) plume & encre, (20) clochette.
 
 ### Équipements divers 3
-(1) périscope télescopique fragile, (2) livre d’images érotiques, (3) trois chatons dans un panier, (4) pelote de laine et aiguilles à tricoter, (5) dague rétractable, (6) 10 boules puantes, (7) 12 pétards, (8) dents en or dans une bourse (50 PO), (9) sarbacane et 10 fléchettes imbibées de somnifère, (10) collier d’oreilles de gobelin, (11) rat apprivoisé, (12) vêtement de la dernière mode, (13) main de bébé momifiée au bout d’une chaîne en argent, (14) grande éponge naturelle et savon, (15) corbeau blanc apprivoisé, (16) 5 m de fil de fer barbelé, (17) patte de lapin porte-bonheur (+1 à un jet une fois par jour), (18) théière et thé, (19) paire de menottes, (20) boussole dans une boîte en bois volumineuse.
+(1) périscope télescopique fragile, (2) livre d’images érotiques, (3) trois chatons dans un panier, (4) pelote de laine et aiguilles à tricoter, (5) dague rétractable, (6) 10 boules puantes, (7) 12 pétards, (8) dents en or dans une bourse (50&nbsp;PO), (9) sarbacane et 10 fléchettes imbibées de somnifère, (10) collier d’oreilles de gobelin, (11) rat apprivoisé, (12) vêtement de la dernière mode, (13) main de bébé momifiée au bout d’une chaîne en argent, (14) grande éponge naturelle et savon, (15) corbeau blanc apprivoisé, (16) 5 m de fil de fer barbelé, (17) patte de lapin porte-bonheur (+1 à un jet une fois par jour), (18) théière et thé, (19) paire de menottes, (20) boussole dans une boîte en bois volumineuse.
