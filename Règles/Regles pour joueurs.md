@@ -35,6 +35,12 @@ Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de
 ## Critique
 Sur un 20 naturel, le joueur a le choix entre (1) lancer deux fois les dommages ou (2) réaliser une manœuvre en plus des dommages normaux. Quelques exemples de manœuvres : désarmer, faire chuter, détruire le bouclier, faire une deuxième attaque, etc.
 
+## Manœuvres en dehors des critiques
+Si un joueur souhaite réaliser une manœuvre, le MJ détermine les effets et le malus éventuel au jet pour toucher. Exemples : 
+- Désarmer : -2 pour toucher
+- Viser l'œil d'un beholder : -4 pour toucher
+- Faire tomber au sol : pas de malus, mais la cible ne subit pas de dommages
+
 ## Magie
 On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, nécromants, etc.).
 
