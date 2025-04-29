@@ -54,6 +54,6 @@ CA ascendate = 19 - CA descendante
 ## Drain d'énergie (variante de règle)
 - Les nécrophages, apparitions et autres morts-vivants mineurs drainent 1D6 de constitution.
 - Les spectres, vampires et autres morts-vivants majeurs drainent 2D4 de constitution.
-- Les ombres draines 1D5 de force.
+- Les ombres draines 1D6 de force.
 
 Un personnage dont un score atteint 0 devient un mort-vivant similaire à celui qui l'a drainé. Sinon, les points perdus sont restaurés au rythme de 1 par jour.
