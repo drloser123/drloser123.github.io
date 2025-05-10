@@ -27,7 +27,7 @@ Les classes martiales (guerrier, paladin, chevalier, etc.) gagnent 1 attaque sup
 Quand un PJ ou un PNJ important atteint **0 PV** il lui reste 3 rounds avant de mourir s'il n'est pas stabilisé ou soigné. Pendant ce temps, il a 3-sur-6 chance de pouvoir ramper et gémir, sinon il est inconscient.
 
 ### Stabiliser
-Pour stabiliser un personnage mourant, il faut utiliser une action. Les chances de réussite sont de 3-sur-6. 4-sur-6 avec des bandages. Un personnage soigné par des moyens magiques est automatiquement stabilisé.
+Pour stabiliser un personnage mourant, il faut utiliser une action. Les chances de réussite sont de 3-sur-6. 4-sur-6 avec des bandages. Un personnage soigné par des moyens magiques est automatiquement stabilisé. Un personnage inconscient ne peut pas boire de potion de soin.
 
 ### Ressusciter
 Pour ressusciter un personnage, il faut trouver un temple possédant un clerc de niveau 7, puis faire une offrande égale au nombres d'XP actuels du personnage décédé.
