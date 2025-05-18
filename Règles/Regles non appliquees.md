@@ -1,5 +1,5 @@
 ---
-title: Règles non appliqués
+title: Règles non appliquées
 nav_order: 99
 parent: OSR
 layout: default
