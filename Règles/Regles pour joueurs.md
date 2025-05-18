@@ -1,5 +1,5 @@
 ---
-title: Règles pour les joueurs
+title: Règles pour les joueurs.
 nav_order: 10
 parent: OSR
 layout: default
