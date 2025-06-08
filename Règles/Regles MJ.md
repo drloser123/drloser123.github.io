@@ -57,3 +57,18 @@ CA ascendate = 19 - CA descendante
 - Les ombres draines 1D6 de force.
 
 Un personnage dont un score atteint 0 devient un mort-vivant similaire à celui qui l'a drainé. Sinon, les points perdus sont restaurés au rythme de 1 par jour.
+
+## Bataille de masse (combat d'armées)
+Regroupez les créatures pour créer des unités ayant au minimum 4 DV. Les créatures ayant 4 DV ou plus peuvent consituer à elles seules une unité.
+
+Assignez à chaque unité un dé d'usage équivalent à son nombre de DV en arrondissant au supérieur. Par exemple, 5 individus de 1 DV ont un total de 5 DV. On leur assigne donc un dé d'usage de 1D6.
+
+A chaque tour, chaque unité qui combat au corps à corps lance son dé d'usage. Sur un résultat de 1 ou 2, le dé d'usage diminue d'un cran : D20 => D12 => D10 => D8 => D6 => D4 => unité détruite.
+
+Si plusieurs unités sont en contact avec une seule, celui qui les contrôle lance un dé d'usage équivalent à la somme des dés de ses unités. S'il fait 1 ou 2, il choisit quelle unité voit son dé d'usage diminuer.
+
+Si un joueur bénéficie d'un avantage stratégique, il lance son dé d'usage avec un avantage : il le lance deux vois et choisit le meilleur résultat.
+
+Si une unité utilise une attaque à distance, la cible lance un dé d'usage supplémentaire.
+
+A la fin du combat, le dé d'usage représente le nombre de DV restant de chaque unité.
