@@ -61,14 +61,14 @@ Un personnage dont un score atteint 0 devient un mort-vivant similaire à celui 
 ## Bataille de masse (combat d'armées)
 Regroupez les créatures pour créer des unités ayant au minimum 4 DV. Les créatures ayant 4 DV ou plus peuvent consituer à elles seules une unité.
 
-Assignez à chaque unité un dé d'usage équivalent à son nombre de DV en arrondissant au supérieur. Par exemple, 5 individus de 1 DV ont un total de 5 DV. On leur assigne donc un dé d'usage de 1D6.
+Assignez à chaque unité un dé d'usage équivalent à son nombre de DV en arrondissant au supérieur. Par exemple, 5 individus de 1 DV ont un total de 5 DV. On leur assigne donc un dé d'usage de 1D6. Les joueurs doivent regrouper leurs unités pour avoir le moins d'arrondis possibles.
 
-A chaque tour, chaque unité qui combat au corps à corps lance son dé d'usage. Sur un résultat de 1, 2 ou 3, le dé d'usage diminue d'un cran : D20 → D12 → D10 → D8 → D6 → D4 → unité détruite.
+A chaque tour, chaque unité au corps à corps lance son dé d'usage. Chaque unité qui subit une attaque à distance lance son dé d'usage. Sur un résultat de 1-3, le dé d'usage diminue d'un cran jusqu'à disparaître.
 
 Si plusieurs unités sont en contact avec une seule, celui qui les contrôle lance un dé d'usage équivalent à la somme des dés de ses unités. S'il fait 1-3, il choisit quelle unité voit son dé d'usage diminuer.
 
-Si un joueur bénéficie d'un avantage stratégique, il lance son dé d'usage avec un avantage : il le lance deux fois et choisit le meilleur résultat.
+Si une unité bénéficie d'un avantage stratégique, elle lance son dé avec un avantage.
 
-Si une unité utilise une attaque à distance, la cible lance un dé d'usage supplémentaire.
+Si une unité combat à 1v2 (par exemple 1D6 vs 1D12), elle lance son dé avec un désavantage.
 
 A la fin du combat, le dé d'usage représente le nombre de DV restant de chaque unité.
