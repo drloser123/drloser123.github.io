@@ -63,7 +63,7 @@ Regroupez les créatures pour créer des unités ayant au minimum 4 DV. Les cré
 
 Assignez à chaque unité un dé d'usage équivalent à son nombre de DV en arrondissant au supérieur. Par exemple, 5 individus de 1 DV ont un total de 5 DV. On leur assigne donc un dé d'usage de 1D6.
 
-A chaque tour, chaque unité qui combat au corps à corps lance son dé d'usage. Sur un résultat de 1 ou 2, le dé d'usage diminue d'un cran : D20 => D12 => D10 => D8 => D6 => D4 => unité détruite.
+A chaque tour, chaque unité qui combat au corps à corps lance son dé d'usage. Sur un résultat de 1 ou 2, le dé d'usage diminue d'un cran : D20 → D12 → D10 → D8 → D6 → D4 → unité détruite.
 
 Si plusieurs unités sont en contact avec une seule, celui qui les contrôle lance un dé d'usage équivalent à la somme des dés de ses unités. S'il fait 1 ou 2, il choisit quelle unité voit son dé d'usage diminuer.
 
