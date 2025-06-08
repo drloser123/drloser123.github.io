@@ -65,9 +65,9 @@ Assignez à chaque unité un dé d'usage équivalent à son nombre de DV en arro
 
 A chaque tour, chaque unité qui combat au corps à corps lance son dé d'usage. Sur un résultat de 1, 2 ou 3, le dé d'usage diminue d'un cran : D20 → D12 → D10 → D8 → D6 → D4 → unité détruite.
 
-Si plusieurs unités sont en contact avec une seule, celui qui les contrôle lance un dé d'usage équivalent à la somme des dés de ses unités. S'il fait 1 ou 2, il choisit quelle unité voit son dé d'usage diminuer.
+Si plusieurs unités sont en contact avec une seule, celui qui les contrôle lance un dé d'usage équivalent à la somme des dés de ses unités. S'il fait 1-3, il choisit quelle unité voit son dé d'usage diminuer.
 
-Si un joueur bénéficie d'un avantage stratégique, il lance son dé d'usage avec un avantage : il le lance deux vois et choisit le meilleur résultat.
+Si un joueur bénéficie d'un avantage stratégique, il lance son dé d'usage avec un avantage : il le lance deux fois et choisit le meilleur résultat.
 
 Si une unité utilise une attaque à distance, la cible lance un dé d'usage supplémentaire.
 
