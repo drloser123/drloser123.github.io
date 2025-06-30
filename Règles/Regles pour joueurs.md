@@ -67,7 +67,7 @@ Modificateurs :
 - **Utiliser des outils :** +1 chance sur 6
 
 ## Flasque d'huile enflammé
-Nécessite un round complet pour être préparée et allumée avant d'être lancé
+Nécessite un round complet pour être préparée et allumée avant d'être lancée
 
 Portée :
 - Courte (+1) : 1,5 m
