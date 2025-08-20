@@ -59,7 +59,7 @@ CA ascendate = 19 - CA descendante
 Un personnage dont un score atteint 0 devient un mort-vivant similaire à celui qui l'a drainé. Sinon, les points perdus sont restaurés au rythme de 1 par jour.
 
 ## Bataille de masse (combat d'armées)
-Regroupez les créatures pour créer des unités ayant au minimum 4 DV. Les créatures ayant 4 DV ou plus peuvent consituer à elles seules une unité.
+Regroupez les créatures pour créer des unités ayant au minimum 4 DV. Les créatures ayant 4 DV ou plus peuvent constituer à elles seules une unité.
 
 Assignez à chaque unité un dé d'usage équivalent à son nombre de DV en arrondissant au supérieur. Par exemple, 5 individus de 1 DV ont un total de 5 DV. On leur assigne donc un dé d'usage de 1D6. Les joueurs doivent regrouper leurs unités pour avoir le moins d'arrondis possibles.
 
