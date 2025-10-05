@@ -40,10 +40,10 @@ Plantes médicinales
 | ------------------------- | -------------------- | ------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------- |
 | 1-sur-6 / 10&nbsp;PO           | Prune sanguine       | Soigne le poison    | Epistaxis<br>Sav. vs poison ou saignements de nez pendant 24h et -1D4 PV                         | Petit fruit rouge au goût ferreux           |
 | 2-sur-6 / 5&nbsp;PO            | Feuille de la vierge | Soigne les maladies | Diarrhée<br>Sav. vs poison ou -1D4 PV                                                            | Feuille en forme de vulve                   |
-| 1-sur-6 / 80&nbsp;PO            | Coke-pollen          | 1D4 PV/round        | Addiction<br>Sav. vs poison ou -1 à toutes les actions par jour sans prise                       | Bouton de fleur blanche contenant le pollen |
+| 1-sur-6 / 80&nbsp;PO            | Coke-pollen          | 1D4 PV/round        | Addiction<br>Sav. vs poison ou -1 à toutes les actions par jour sans prise  (remède : Fougère dorée)   | Bouton de fleur blanche contenant le pollen |
 | 2-sur-6 / 40&nbsp;PO            | Ortie cicatrique     | 1D4 PV/tour         | Irritations cutanée<br>Sav. vs poison ou le prochain repos n'est pas réparateur                  | Feuilles urtiquantes                        |
 | 1-sur-6 / 20&nbsp;PO            | Noix trouble         | 1D6 PV/heure        | Trouble de la vision<br>Sav. vs poison ou -2 à toutes les actions nécessitant la vue pendant 24h | Noix noire                                  |
-| 2-sur-6 / 10&nbsp;PO            | Fougère dorée        | 2D4/nuit            | Somnolence<br>Sav. vs poison ou -1 à toutes les actions le jour suivant (remète : coke-pollen)   | Grande feuilles aux reflets irisés          |
+| 2-sur-6 / 10&nbsp;PO            | Fougère dorée        | 2D4/nuit            | Somnolence<br>Sav. vs poison ou -1 à toutes les actions le jour suivant (remède : coke-pollen)   | Grande feuilles aux reflets irisés          |
 
 Plantes magiques
 {: .label .label-yellow }

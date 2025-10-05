@@ -15,7 +15,7 @@ Effects are instantaneous
 - 10000 GP – Heals all wounds and cures diseases  
 
 ## Foraging
-The character must spend **4 hours gathering**. During this time, they can make 2 **searches**, or 4 if they have an affinity with nature: barbarian, druid, etc.
+The character must spend **4 hours foraging**. During this time, they can make 2 **searches**, or 4 if they have an affinity with nature: barbarian, druid, etc.
 
 The player indicates beforehand which plant(s) they are looking for. For each search, they roll 1d6 and consult the tables below to see if they found what they were seeking.			
 
@@ -40,7 +40,7 @@ Medicinal plants
 | ---------------------- | ------------------ | -------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------- |
 | 1-in-6 / 10 GP         | Blood Plum         | Cures poison         | Nosebleed<br>Save vs poison or suffer nosebleeds for 24h and lose 1D4 HP                   | Small red fruit with a metallic taste       |
 | 2-in-6 / 5 GP          | Maiden’s Leaf      | Cures diseases       | Diarrhea<br>Save vs poison or lose 1D4 HP                                                 | Leaf shaped like a vulva                    |
-| 1-in-6 / 80 GP         | Coke-Pollen        | 1D4 HP/round         | Addiction<br>Save vs poison or -1 to all actions per day without a dose                    | White flower bud containing pollen          |
+| 1-in-6 / 80 GP         | Coke-Pollen        | 1D4 HP/round         | Addiction<br>Save vs poison or -1 to all actions per day without a dose (remedy: Golden Fern)  | White flower bud containing pollen          |
 | 2-in-6 / 40 GP         | Scar Nettle        | 1D4 HP/turn          | Skin irritation<br>Save vs poison or next rest is not restorative                          | Stinging leaves                             |
 | 1-in-6 / 20 GP         | Murky Nut          | 1D6 HP/hour          | Blurred vision<br>Save vs poison or -2 to all vision-based actions for 24h                 | Black nut                                   |
 | 2-in-6 / 10 GP         | Golden Fern        | 2D4 HP/night         | Drowsiness<br>Save vs poison or -1 to all actions next day (remedy: coke-pollen)           | Large leaves with iridescent sheen          |
