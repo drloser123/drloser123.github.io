@@ -1,5 +1,5 @@
 ---
-title: Plantes et potions de soin
+title: Plants & healing potions
 nav_order: 20
 parent: OSR
 layout: default
