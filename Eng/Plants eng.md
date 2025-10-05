@@ -1,7 +1,7 @@
 ---
 title: Plants & healing potions
 nav_order: 20
-parent: OSR
+parent: OSR Eng
 layout: default
 ---
 
