@@ -55,7 +55,7 @@ Plantes magiques
 | 1-sur-6 / 150&nbsp;PO            | Champibleu          | Soigne la pétrifiction                 | Somnolence<br>Sav. vs sorts ou -1 à toutes les actions pendant 24h                                    | Petit champignon bleu qui sent la transpiration                                       |
 | 1-sur-6 / 20&nbsp;PO            | Spores arcaniques   | Détection de la magie pendant 1 round  | Fait briller la peau en rose durant 1 semaine                                                         | Pressez le champignon pour lâcher ses spores                                          |
 | 1-sur-6 / 100&nbsp;PO           | Aquabulbe           | Respiration aquatique<br>durant 1 tour | Nausée<br>Sav. vs sorts ou vomissement d'eau et -2 à toutes les actions durant 1h                     | Gros bulbe bleu surmonté d'une tige verte                                             |
-| 1-sur-6<sup>2</sup>  / XP du mort en&nbsp;PO       | Pissenlit des anges | Résurection                            | Folie<br>Sav. vs sorts où est hanté par les souvenirs du mort                                         | Pissenlit à fleur violette                                                            |
+| 1-sur-6<sup>2</sup>  / XP du mort en&nbsp;PO       | Pissenlit des anges | Résurection                            | Folie<br>Sav. vs sorts où est hanté par les souvenirs du mort de la tombe                                        | Pissenlit à fleur violette                                                            |
 
 1. Uniquement à la pleine lune
 2. Pousse uniquement sur les tombes fraiches (moins de 1 semaine) - une seule recherche possible par tombe

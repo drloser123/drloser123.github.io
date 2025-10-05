@@ -55,7 +55,7 @@ Magical plants
 | 1-in-6 / 150 GP        | Bluecap Mushroom   | Cures petrification                     | Drowsiness<br>Save vs spells or -1 to all actions for 24h                                        | Small blue mushroom with a sweaty smell                                               |
 | 1-in-6 / 20 GP         | Arcanic Spores     | Detect magic for 1 round                | Makes the skin glow pink for one week                                                            | Press the mushroom to release its spores                                              |
 | 1-in-6 / 100 GP        | Aquabulb           | Water breathing<br>for 1 turn           | Nausea<br>Save vs spells or vomit water and take -2 to all actions for 1h                        | Large blue bulb topped with a green stalk                                             |
-| 1-in-6<sup>2</sup> / Dead’s XP in GP | Angel Dandelion | Resurrection                            | Madness<br>Save vs spells or be haunted by the dead’s memories                                   | Violet-flowered dandelion                                                             |
+| 1-in-6<sup>2</sup> / Dead’s XP in GP | Angel Dandelion | Resurrection                            | Madness<br>Save vs spells or be haunted by memories of the dead man in the grave       | Violet-flowered dandelion                                                             |
 
 1. Only under the full moon  
 2. Grows only on fresh graves (less than 1 week) – only one search per grave  
