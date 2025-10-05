@@ -17,7 +17,9 @@ Effects are instantaneous
 ## Foraging
 The character must spend **4 hours foraging**. During this time, they can make 2 **searches**, or 4 if they have an affinity with nature: barbarian, druid, etc.
 
-The player indicates beforehand which plant(s) they are looking for. For each search, they roll 1d6 and consult the tables below to see if they found what they were seeking.			
+The player indicates beforehand which plant(s) they are looking for. For each search, they roll 1d6 and consult the tables below to see if they found what they were seeking.		
+
+Example: a barbarian spends 4 hours foraging. As his class has an affinity with nature, he can make 4 searches. He wants to do 2 searches for Pilgrim’s Herb and 1 for Coke-Pollen. For the Pilgrim’s Herb, he rolls 2d6 and gets a 3 and a 4, which allows him to find one. For Coke-Pollen, he rolls 2d6 and gets a 2 and a 6, finding none.
 
 ## List of plants
 

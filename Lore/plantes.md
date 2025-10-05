@@ -17,7 +17,9 @@ Les effets sont instantanés
 ## Cueillette
 Le personnage doit consacrer **4 heures à la cueillette**. Dans ce laps de temps, il peut faire 2 **recherches**, ou 4 s'il a des affinités avec la nature : barbare, druide, etc.
 
-Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque recherche, il lance 1d6 et consulte les tables ci-dessous pour savoir s'il a trouvé ce qu'il cherchait.			
+Le joueur indique à l'avance la ou les plantes qu'il cherche. Pour chaque recherche, il lance 1d6 et consulte les tables ci-dessous pour savoir s'il a trouvé ce qu'il cherchait.
+
+Exemple : un barbare passe 4 heures à faire de la ceuillette. Comme sa classe a une affinité avec la nature, il a droit à 4 recherches. Il veut faire 2 recherches pour de l'herbes à pellerin et 1 pour du coke-pollen. Pour l'herbe à pellerin, il lance 2d6 et obtient un 3 et un 4, ce qui lui permet d'en trouver une. Pour le coke-pollen, il lance 2d6 et obtient un 2 et un 6, il n'en trouve pas.
 
 ## Liste des plantes
 
