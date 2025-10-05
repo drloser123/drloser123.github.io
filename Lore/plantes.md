@@ -6,7 +6,7 @@ layout: default
 ---
 
 ## Prix des potions de soin
-Les effets sont instantanés
+Les effets sont instantanés. Un personnage inconscient ne peut pas boire de potion.
 - 250&nbsp;PO - récupère 1D6+1 PV
 - 500&nbsp;PO - 2D6+2 PV
 - 1000&nbsp;PO - 3D6+3 PV

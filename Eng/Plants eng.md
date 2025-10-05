@@ -6,7 +6,7 @@ layout: default
 ---
 
 ## Price of healing potions
-Effects are instantaneous  
+Effects are instantaneous. An unconscious character cannot drink potions.
 - 250 GP – restores 1D6+1 HP  
 - 500 GP – 2D6+2 HP  
 - 1000 GP – 3D6+3 HP  
