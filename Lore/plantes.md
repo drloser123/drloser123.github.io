@@ -1,7 +1,7 @@
 ---
 title: Plantes et potions de soin
 nav_order: 20
-parent: OSR Eng
+parent: OSR
 layout: default
 ---
 
