@@ -68,7 +68,7 @@ Poisons
 | 1-in-6 / 50 GP         | Nightmare Leaf    | Sleep in 1 turn               | Ingestion or injection                                                 | Sap from a red-colored ivy                  |
 | 1-in-6<sup>1</sup> / 150 GP | Dream Pollen      | Instant sleep                 | Inhalation – requires a ranged attack roll                             | Powder from a small purple flower           |
 | 1-in-6<sup>2</sup> / 80 GP | Basilisk’s Eye    | Paralysis in 2D4 rounds       | Ingestion or injection                                                 | Large grey flower with crystalized petals   |
-| 1-in-6 / 40 GP         | JasMush           | Nausea, -2 to attack          | Inhalation – requires a ranged attack roll                             | Gas collected by fermenting the plant       |
+| 1-in-6 / 40 GP         | JasFlie           | Nausea, -2 to attack          | Inhalation – requires a ranged attack roll                             | Gas collected by fermenting the plant       |
 | 1-in-6<sup>3</sup> / 100 GP | Scorpion Heart    | \-2D6 HP                      | Apply to a blade – works once – dissipates after 1h (100 GP)           | Small oval, blood-red fruit                 |
 | 1-in-6<sup>4</sup> / 600 GP | Black Lotus       | Death in 1D4 rounds           | Ingestion or injection                                                 | Black lotus flower                          |
 
