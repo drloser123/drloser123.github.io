@@ -102,16 +102,16 @@ Les autres actions permettant de gagner des XP sont :
 - **24h de repos** : supprime tous les niveaux de fatigue
 - **Fatigue** : -1 à tous les jets par niveau
 
-## Vitesse de déplacement lors des combats (encombrement)
+## Vitesse de déplacement dans les donjons (encombrement)
 La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte et du fait qu’il transporte ou non un trésor conséquent (à la discrétion du MJ).
+
+La vitesse indiquée ci-dessous entre parenthèses est celle utilisée en combat.
 
 | Armure portée | Sans trésor | Avec trésor |
 | ------------- | ----------- | ----------- |
 | Sans armure   | 36 m (12 m / 40') | 27 m (9 m / 30')  |
 | Armure légère | 27 m (9 m / 30')  | 18 m (6 m / 20')  |
 | Armure lourde | 18 m (6 m / 20')  | 9 m (3 m / 10')   |
-
-La vitesse indiquée entre parenthèses est celle utilisée en combat.
 
 ## Vitesse de déplacement à pieds lors des voyages
 ### En fonction de l'armure
