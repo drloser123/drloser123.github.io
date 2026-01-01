@@ -47,7 +47,6 @@ On distingue la magie divine (clerc) de la magie arcanique (magicien, elfe, néc
 Tous les utilisateurs de magie peuvent :
 - lire les ouvrages correspondant à la magie qu'ils pratiquent
 - détecter la magie en se concentrant pendant 1 tour
-- faire un rituel pour lancer sans le perdre un sort qu'ils ont mémorisé : le rituel nécessite 1 tour de préparation par niveau de sort, et fait perdre au lanceur 1 PV par niveau de sort
 - utiliser un parchemin de niveau supérieur au leur, à condition de réussir un jet d'attribut (intelligence pour la magie arcanique, sagesse pour la magie divine) avec le nombre de niveaux manquants en malus. Sur un échec, le résultat est généralement désastreux
 
 Les utilisateurs de magie divine connaissent tous les sorts de leur liste de sorts.
