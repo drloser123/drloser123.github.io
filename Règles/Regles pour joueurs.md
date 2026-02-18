@@ -73,7 +73,7 @@ Portée :
 - Moyenne : 9 m
 - Longue (-1) : 15 m
 
-**Viser une cible :** Sur une attaque à distance réussie, le contenant se brise et la cible est aspergée. Les dégâts sont infligés deux rounds d’affilée.
+**Viser une cible :** Sur une attaque à distance réussie, le contenant se brise et la cible est aspergée. Les dégâts (1d8) sont infligés deux rounds d’affilée.
 
 **Viser le sol :** Pour viser un endroit en particulier, il faut faire un jet pour toucher une CA de 10. Toutes les créatures situées dans un rayon de 1,5m. La zone est alors enflammée pendant 10 minutes, et toutes les créatures à l'intérieur subissent 1D2 points de dommage.
 
