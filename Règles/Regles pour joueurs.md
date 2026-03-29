@@ -20,7 +20,7 @@ Un personnage subissant des dommages et utilisant un bouclier peut le sacrifier 
 Les ennemis peuvent grouper leurs attaques : +1 pour toucher et +2 au dommage par créature en plus de la première, jusqu'à un maximum de +3/+6. Par exemple, 4 gobelins qui attaquent ensemble, au lieu de faire 4 attaque à +0 et 1D6 de dommage, on fait une seule attaque à +3, et 1D6+6 de dommages.
 
 ## Attaques supplémentaires
-Les classes martiales (guerrier, paladin, chevalier, etc.) gagnent 1 attaque supplémentaire par niveau, mais uniquement contre les créatures avec 1DV ou moins.
+À partir du 5e niveau, les classes martiales (guerrier, paladin, chevalier, etc.) gagnent 1 attaque supplémentaire par niveau, mais uniquement contre les créatures avec 1DV ou moins.
 
 ## Mort
 ### Tomber à 0 PV
