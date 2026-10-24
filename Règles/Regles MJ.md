@@ -52,11 +52,12 @@ CA ascendate = 19 - CA descendante
 - Jungle, montagnes, marais : 3 fois par jour
 
 ## Rencontres aléatoires en donjon - dé de stress
-Prendre un bol. 
-Ajouter un dé dans le bol à chaque tour.
+Ajouter un d6 dans un bol à chaque tour.
+
 Lancer les dés si :
-- les joueurs font du bruit
+- Les joueurs font du bruit
 - On met un 6e dé dans le bol
+
 Il y a une rencontre aléatoire si on tire un 6. Dans ce cas, retirer tous les dés du bol.
 
 ## Drain d'énergie (variante de règle)
