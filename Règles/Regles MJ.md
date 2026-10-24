@@ -51,6 +51,14 @@ CA ascendate = 19 - CA descendante
 - Voyage aérien, terres stériles, désert, forêt, collines : 2 fois par jour
 - Jungle, montagnes, marais : 3 fois par jour
 
+## Rencontres aléatoires en donjon - dé de stress
+Prendre un bol. 
+Ajouter un dé dans le bol à chaque tour.
+Lancer les dés si :
+- les joueurs font du bruit
+- On met un 6e dé dans le bol
+Il y a une rencontre aléatoire si on tire un 6. Dans ce cas, retirer tous les dés du bol.
+
 ## Drain d'énergie (variante de règle)
 - Les nécrophages, apparitions et autres morts-vivants mineurs drainent 1D6 de constitution.
 - Les spectres, vampires et autres morts-vivants majeurs drainent 2D4 de constitution.
