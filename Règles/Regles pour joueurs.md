@@ -99,7 +99,7 @@ Les autres actions permettant de gagner des XP sont :
 ## Fatigue
 - **Mauvaise nuit** : passer une mauvaise nuit ajoute un niveau de fatigue
 - **24h de repos** : supprime tous les niveaux de fatigue
-- **Fatigue** : -1 à tous les jets par niveau
+- **Fatigue** : -1 à tous les jets par niveau de fatigue
 
 ## Vitesse de déplacement dans les donjons (encombrement)
 La vitesse de déplacement d’un personnage dépend de l’armure qu’il porte et du fait qu’il transporte ou non un trésor conséquent (à la discrétion du MJ).
