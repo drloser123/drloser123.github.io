@@ -4,7 +4,17 @@ theme: just-the-docs
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 
-url: "https://drloser123.github.io/"
+url: "https://drloser123.github.io"
+baseurl: "/osr"
+
+# Pages autonomes servies à la racine du domaine (copiées par le workflow), pas dans /osr/
+exclude:
+  - trivial-pse/
+  - 5e-regard/
+  - site-root/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
 
 aux_links:
   Règles d'Old-School Essentials: 

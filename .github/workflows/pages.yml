@@ -42,9 +42,15 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        # Le site Jekyll est publié sous /osr/ (baseurl défini dans _config.yml)
+        run: bundle exec jekyll build --destination _site/osr
         env:
           JEKYLL_ENV: production
+      - name: Assemble root of the domain
+        # Racine : redirection vers /osr/ + pages autonomes à leur adresse actuelle
+        run: |
+          cp -r site-root/. _site/
+          cp -r trivial-pse 5e-regard _site/
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
