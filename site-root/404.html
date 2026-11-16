@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Page introuvable</title>
+<script>
+  // Anciennes adresses (ex. /Règles/...) : on renvoie vers la même page sous /osr/
+  var p = location.pathname;
+  if (p.indexOf("/osr/") !== 0 && p !== "/osr") {
+    location.replace("/osr" + p + location.search + location.hash);
+  }
+</script>
+</head>
+<body>
+<p>Page introuvable. <a href="/osr/">Retour au site</a></p>
+</body>
+</html>
