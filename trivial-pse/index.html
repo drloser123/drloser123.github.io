@@ -366,13 +366,10 @@ function vSetup(){
   ${inProg?`<button class="big" id="resume" style="margin-bottom:14px">Reprendre la partie en cours</button>`:''}
   <div class="panel"><label class="l">Joueurs ou équipes</label>${rows}
   ${setup.names.length<8?`<button class="ghost" id="add">+ Ajouter un joueur</button>`:''}</div>
-  <div class="panel"><label class="l">Pour gagner</label>${seg('goal',[['6','Les 6 camemberts'],['3','3 camemberts'],['pts','Points']])}
-  ${setup.goal==='pts'?`<div style="margin-top:10px">${seg('pts',[['5','5 pts'],['10','10 pts'],['15','15 pts']])}</div>`:''}
-  <label class="l" style="margin-top:14px">Choix du thème</label>${seg('mode',[['de','Lancer le dé'],['choix','Au choix'],['mix','Dé + joker']])}
-  <div class="tog" style="margin-top:10px"><span>Rejouer après une bonne réponse</span><button class="sw ${setup.again?'on':''}" data-tog="again" aria-label="Rejouer après une bonne réponse" aria-pressed="${setup.again}"></button></div>
+  <div class="panel">
+  <div class="tog"><span>Rejouer après une bonne réponse</span><button class="sw ${setup.again?'on':''}" data-tog="again" aria-label="Rejouer après une bonne réponse" aria-pressed="${setup.again}"></button></div>
   <div class="tog"><span>Chrono de 30 secondes</span><button class="sw ${setup.timer?'on':''}" data-tog="timer" aria-label="Chrono de 30 secondes" aria-pressed="${setup.timer}"></button></div></div>
   <div class="panel"><label class="l">Les 6 thèmes (${Q.length} questions)</label><div class="leg">${THEMES.map(t=>`<div><span class="dot" style="background:${t.col}"></span>${t.name} · ${byTheme[t.id].length}</div>`).join('')}</div></div>
-  <button class="sec" id="review" style="margin-bottom:12px">Passer en revue les questions${revCount()}</button>
   <button class="big" id="start">${inProg?'Nouvelle partie':'C’est parti'}</button>
   <p class="foot">Bonne réponse sur un thème pas encore gagné = un camembert de cette couleur.<br>Questions tirées du Mémo Urgence v2.0 (Protection Civile Paris Seine, août 2023, recommandations PS 2022).</p>`;
 }
@@ -400,7 +397,7 @@ function roll(){
   },950);
 }
 function ask(t){
-  const pool=byTheme[t].filter(i=>!removed(i));let used=S.used[t]||[];
+  const pool=byTheme[t];let used=S.used[t]||[];
   let free=pool.filter(i=>!used.includes(i));if(!free.length){used=[];free=pool.slice()}
   const idx=free[Math.floor(Math.random()*free.length)];used.push(idx);S.used[t]=used;
   const x=Q[idx];S.q={idx,t,opts:shuffle([x.ok,...x.bad]),chosen:null,left:30};S.joker=false;S.screen='q';save();render();
@@ -484,7 +481,7 @@ function render(){
 function start(){
   readNames();
   const names=setup.names.map((n,i)=>n.trim()||`Joueur ${i+1}`);
-  S={screen:'turn',players:shuffle(names).map(name=>({name,w:[0,0,0,0,0,0].map(()=>false),pts:0})),cur:0,goal:setup.goal,pts:+setup.pts,mode:setup.mode,timer:setup.timer,again:setup.again,used:S&&S.used||{},q:null,joker:false};
+  S={screen:'turn',players:shuffle(names).map(name=>({name,w:[0,0,0,0,0,0].map(()=>false),pts:0})),cur:0,goal:'6',pts:10,mode:'de',timer:setup.timer,again:setup.again,used:S&&S.used||{},q:null,joker:false};
   save();render();
 }
 document.addEventListener('click',e=>{
