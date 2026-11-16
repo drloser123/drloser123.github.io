@@ -12,8 +12,11 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif}
 main{max-width:560px;margin:0 auto;padding:max(24px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom))}
 h1,h2{font-family:"Archivo Black",Impact,sans-serif;line-height:1.05;margin:0}
-h2{font-size:22px;margin:0 0 12px}
-ul{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:12px}
+section{display:grid;grid-template-columns:6.2em minmax(0,1fr);gap:14px;align-items:start;margin:0 0 26px}
+h2{font-size:17px;margin:0;padding-top:16px;overflow-wrap:break-word;hyphens:auto}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+li{min-width:0}
+@media(max-width:340px){section{grid-template-columns:1fr;gap:10px}h2{padding-top:0}}
 a{display:block;background:var(--card);color:var(--ink);text-decoration:none;border-radius:18px;padding:16px 18px;box-shadow:0 5px 0 rgba(0,0,0,.18)}
 a:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
 a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
@@ -30,8 +33,10 @@ a span{color:var(--mut);font-size:14px}
 <body>
 <main>
 
-<!-- Pour ajouter un lien : copier un <li>…</li> (ou toute une section h2 + ul) -->
+<!-- Pour ajouter un lien : copier un <li>…</li> (ou toute une <section> : titre h2 à gauche, liste à droite) -->
 
+<section>
+<h2>Références techniques</h2>
 <ul>
   <li><a href="/referentiel-pse/">
     <b>Référentiel PSE</b>
@@ -39,7 +44,9 @@ a span{color:var(--mut);font-size:14px}
   </a>
   <p class="off">(<a href="https://www.interieur.gouv.fr/Le-ministere/Securite-civile/Documentation-technique/Secourisme-et-associations/Les-recommandations-et-les-referentiels" target="_blank" rel="noopener">site officiel du ministère de l'Intérieur</a>)</p></li>
 </ul>
+</section>
 
+<section>
 <h2>Mémos</h2>
 <ul>
   <li><a class="memo" href="https://drive.google.com/file/d/1FCWCLL6ZZNGfszsrbwgeeSP3QMrOB4zj/view" target="_blank" rel="noopener">
@@ -63,14 +70,19 @@ a span{color:var(--mut);font-size:14px}
     <i>v1.0 · nov. 2022</i>
   </a></li>
 </ul>
+</section>
 
+<section>
+<h2>Matériel</h2>
 <ul>
   <li><a href="/verif-materiel/">
     <b>Vérif matériel</b>
     <span>Fiches de vérification avant poste, à cocher</span>
   </a></li>
 </ul>
+</section>
 
+<section>
 <h2>Jeux</h2>
 <ul>
   <li><a href="/trivial-pse/">
@@ -82,6 +94,7 @@ a span{color:var(--mut);font-size:14px}
     <span>Faire deviner en équipe : parler, un mot, mimer</span>
   </a></li>
 </ul>
+</section>
 </main>
 </body>
 </html>
