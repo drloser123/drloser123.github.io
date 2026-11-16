@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Le 5e Regard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: soirée jeu, rapide, lisible à bout de bras
+   IDEA: une carte de jeu tenue en main + un sablier qui se vide
+   PICTURE: la carte géante et la barre de temps
+   COLOUR and TYPE: orange et bleu marine Protection Civile, rouge pour l'urgence ; Archivo Black + Inter
+   LAYOUT: une colonne, gros boutons en bas du pouce */
+:root{color-scheme:light dark;--bg:light-dark(#f39200,#12235a);--ink:light-dark(#12235a,#fff4e6);--card:light-dark(#fff,#1c3170);--soft:light-dark(#ffd9a3,#182a63);--red:#d7261e;--green:#1f8a4c;--mut:light-dark(#3c4a78,#c3cbe8);--accent:#f39200}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif;overflow-x:clip;-webkit-tap-highlight-color:transparent}
+main{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
+h1,h2,.big{font-family:"Archivo Black",Impact,sans-serif;line-height:1.05;text-wrap:balance;margin:0}
+h1{font-size:clamp(36px,10vw,52px)}h2{font-size:32px}
+.screen{display:none;flex:1;flex-direction:column;gap:16px}.screen.on{display:flex}
+.panel{background:var(--card);border-radius:20px;padding:18px;box-shadow:0 6px 0 rgba(0,0,0,.18)}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+input,select,textarea{width:100%;font:16px Inter,sans-serif;padding:12px;border-radius:12px;border:2px solid var(--ink);background:var(--card);color:var(--ink);min-height:48px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+button{font:800 18px Inter,sans-serif;border:0;border-radius:16px;min-height:56px;padding:12px 18px;cursor:pointer;background:var(--ink);color:light-dark(#fff,#12235a);box-shadow:0 5px 0 rgba(0,0,0,.25);touch-action:manipulation}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+button.ok{background:var(--green);color:#fff}button.no{background:var(--red);color:#fff}
+button.ghost{background:transparent;color:var(--ink);box-shadow:none;border:2px solid var(--ink);min-height:44px;font-size:15px}
+button[disabled]{opacity:.35;pointer-events:none}
+.mut{color:var(--mut);font-size:14px}
+.tag{display:inline-block;background:var(--ink);color:light-dark(#fff,#12235a);border-radius:99px;padding:4px 12px;font-weight:800;font-size:14px}
+.rules{margin:0;padding-left:20px}.rules li{margin:4px 0}
+.scores{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.sc{background:var(--card);border-radius:18px;padding:14px;text-align:center}
+.sc b{display:block;font:44px "Archivo Black",sans-serif;line-height:1}
+.sc.lead{outline:4px solid var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:6px 4px;text-align:right}td:first-child,th:first-child{text-align:left}
+th{font-size:13px;color:var(--mut);font-weight:600}tr+tr td{border-top:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+/* jeu */
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.timebar{height:22px;border-radius:99px;background:var(--soft);overflow:hidden;border:2px solid var(--ink)}
+.timebar i{display:block;height:100%;width:100%;background:light-dark(#12235a,#f39200);transform-origin:left;transition:transform .25s linear}
+.timebar.hot i{background:var(--red)}
+.clock.pen{animation:pen .6s}
+@keyframes pen{30%{color:var(--red);transform:scale(1.3)}}
+.clock{font:800 28px Inter,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cardbox{flex:1;display:flex;align-items:center;justify-content:center;min-height:240px}
+.card{width:100%;min-height:240px;background:var(--card);border-top:10px solid light-dark(#12235a,#f39200);border-radius:26px;box-shadow:0 10px 0 rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;transform:rotate(-1.5deg)}
+.card .big{font-size:clamp(30px,9vw,48px);word-break:break-word}
+.card.pop{animation:pop .22s ease-out}
+@keyframes pop{from{transform:rotate(-1.5deg) scale(.9);opacity:.3}}
+@media(prefers-reduced-motion:reduce){.card.pop{animation:none}.timebar i{transition:none}}
+.acts{display:grid;gap:12px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.acts .ok{grid-column:1/-1;min-height:84px;font-size:24px}
+.small{display:flex;gap:10px;flex-wrap:wrap}.small button{flex:1}
+.hint{margin:14px 0 0;font-size:16px;color:var(--mut);text-wrap:balance}
+.flist{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}.flist li{background:var(--soft);border-radius:10px;padding:8px 12px;display:flex;flex-direction:column}.flist span{font-size:14px;color:var(--mut)}
+.list{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.list li{background:var(--soft);border-radius:10px;padding:6px 10px;font-weight:600}
+[hidden]{display:none!important}
+.screen>.tag{align-self:flex-start}
+#rules-body h3{font:800 18px Inter,sans-serif;margin:14px 0 4px;color:light-dark(#d97f00,#f39200)}#rules-body p{margin:4px 0}
+/* touches d'orange Protection Civile */
+.panel{border-top:6px solid light-dark(#12235a,#f39200)}
+.panel h2{color:light-dark(#d97f00,#f39200)}
+.tag{background:light-dark(#12235a,#f39200)!important;color:light-dark(#f39200,#12235a)!important}
+.clock{color:light-dark(#12235a,#f39200)}
+h1{color:light-dark(#12235a,#f39200)}
+#b-start,#b-round,#b-go,#b-next,#b-resume,#b-review-next{background:light-dark(#12235a,#f39200);color:light-dark(#f39200,#12235a)}
+button.ghost{border-color:light-dark(#12235a,#f39200)}
+.sc{border-top:6px solid light-dark(#12235a,#f39200)}
+.sc.lead{outline-color:var(--accent)}
+.card .big{color:light-dark(#12235a,#fff4e6)}
+.overlay{position:fixed;inset:0;background:rgba(18,35,90,.7);display:none;align-items:center;justify-content:center;padding:20px}
+.overlay.on{display:flex}.overlay .panel{max-width:420px;width:100%;display:flex;flex-direction:column;gap:12px}
+.sand{fill:light-dark(#fff,#f39200)}
+.hour{width:84px;height:84px;flex:none}
+.hero{display:flex;gap:16px;align-items:center}
+</style>
+</head>
+<body>
+<main>
+
+<!-- ACCUEIL -->
+<section class="screen on" id="s-setup">
+  <div class="hero">
+    <svg class="hour" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="4" width="40" height="7" rx="3" fill="currentColor"/><rect x="12" y="53" width="40" height="7" rx="3" fill="currentColor"/><path d="M17 11h30c0 12-11 16-11 21s11 9 11 21H17c0-12 11-16 11-21S17 23 17 11z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 16h20c-2 6-8 9-10 13-2-4-8-7-10-13z" class="sand"/><path d="M20 50c2-6 8-8 12-9 4 1 10 3 12 9z" class="sand"/></svg>
+    <div><h1>Le 5<sup style="font-size:.5em">e</sup> Regard</h1><p class="mut" style="margin:4px 0 0">Réviser le référentiel PSE en jouant. Parler, un mot, mimer.</p></div>
+  </div>
+  <div class="panel" style="display:flex;flex-direction:column;gap:14px">
+    <div class="row">
+      <div><label for="t1">Équipe 1</label><input id="t1" value="Les Bleus" maxlength="20"></div>
+      <div><label for="t2">Équipe 2</label><input id="t2" value="Les Rouges" maxlength="20"></div>
+    </div>
+    <div class="row">
+      <div><label for="dur">Durée d'un tour</label><select id="dur"><option value="30" selected>30 secondes</option><option value="45">45 secondes</option><option value="60">60 secondes</option></select></div>
+      <div><label for="nb">Nombre de cartes</label><select id="nb"><option>20</option><option>30</option><option selected>40</option></select></div>
+    </div>
+    <p class="mut" style="margin:0">Cartes tirées au hasard parmi <span id="nb-cards">298</span> notions des références techniques PSE 2026 (36 modules) : chiffres, sigles, techniques, matériels, signes.</p>
+  </div>
+  <div class="panel">
+    <h2 style="font-size:22px;margin-bottom:8px">Le principe</h2>
+    <ul class="rules">
+      <li>Les mêmes cartes servent pour les 3 manches.</li>
+      <li>Un joueur fait deviner à son équipe pendant le temps imparti, puis le téléphone passe à l'autre équipe.</li>
+      <li>Une manche se termine quand toutes les cartes ont été trouvées.</li>
+      <li>Besoin d'aide ? Le bouton « Indice −5 s » affiche une explication sous la carte, contre 5 secondes. Pour un chiffre, l'équipe doit donner la valeur exacte.</li>
+      <li>En manche 1, le bouton Pause permet d'éditer ou de supprimer la carte en cours.</li>
+      <li>Chaque carte trouvée = 1 point. L'équipe qui a le plus de points après 3 manches gagne.</li>
+    </ul>
+  </div>
+  <button class="ghost" id="b-rules" style="margin-top:auto">📖 Toutes les règles</button>
+  <button id="b-start">Lancer la partie</button>
+</section>
+
+<!-- INTRO MANCHE -->
+<section class="screen" id="s-round">
+  <span class="tag" id="r-tag">Manche 1</span>
+  <h1 id="r-title">Parler librement</h1>
+  <div class="panel"><ul class="rules" id="r-rules"></ul></div>
+  <div class="scores" id="r-scores"></div>
+  <button id="b-round" style="margin-top:auto">C'est parti</button>
+</section>
+
+<!-- PASSE LE TÉLÉPHONE -->
+<section class="screen" id="s-ready">
+  <span class="tag" id="y-tag"></span>
+  <h1 id="y-team"></h1>
+  <p style="font-size:18px;margin:0">Un joueur de l'équipe prend le téléphone. Les autres devinent.</p>
+  <div class="panel"><b id="y-left"></b><p class="mut" style="margin:4px 0 0" id="y-rule"></p></div>
+  <button id="b-go" style="margin-top:auto;min-height:84px;font-size:24px">Je suis prêt, top chrono !</button>
+</section>
+
+<!-- JEU -->
+<section class="screen" id="s-play">
+  <div class="top"><span class="tag" id="p-tag"></span><span class="clock" id="p-clock">30</span><button class="ghost" id="b-pause" aria-label="Pause">Pause</button></div>
+  <div class="timebar" id="p-bar"><i></i></div>
+  <div class="top mut"><span id="p-team"></span><span id="p-count"></span></div>
+  <div class="cardbox"><div class="card" id="p-card"><div><span class="big" id="p-word"></span><p class="hint" id="p-hint" hidden></p></div></div></div>
+  <div class="small" style="margin:-4px 0 4px"><button class="ghost" id="b-hint">Indice (−5 s)</button></div>
+  <div class="acts">
+    <button class="ok" id="b-ok">Trouvé ✓</button>
+    <button class="ghost" id="b-pass" style="min-height:56px">Passer</button>
+    <button class="no" id="b-fault">Faute −5 s</button>
+  </div>
+  <div class="small"><button class="ghost" id="b-undo" disabled>Annuler la dernière action</button></div>
+</section>
+
+<!-- RÉVISION ENTRE DEUX MANCHES -->
+<section class="screen" id="s-review">
+  <span class="tag" id="v-tag">Pause révision</span>
+  <h1>On relit les cartes</h1>
+  <p class="mut" style="margin:0">Toutes les cartes de la partie, avec leur indice, avant d'attaquer la manche suivante.</p>
+  <div class="panel"><ul class="flist" id="v-list"></ul></div>
+  <button id="b-review-next" style="margin-top:auto">Manche suivante</button>
+</section>
+
+<!-- FIN DE TOUR -->
+<section class="screen" id="s-turn">
+  <span class="tag" id="e-tag">Temps écoulé</span>
+  <h1 id="e-title"></h1>
+  <div class="panel"><b>Cartes trouvées</b><ul class="flist" id="e-list"></ul></div>
+  <div class="scores" id="e-scores"></div>
+  <button id="b-next" style="margin-top:auto">Suivant</button>
+</section>
+
+<!-- FIN DE PARTIE -->
+<section class="screen" id="s-end">
+  <span class="tag">Partie terminée</span>
+  <h1 id="f-title"></h1>
+  <div class="scores" id="f-scores"></div>
+  <div class="panel"><table><thead><tr><th>Manche</th><th id="f-h1"></th><th id="f-h2"></th></tr></thead><tbody id="f-body"></tbody></table></div>
+  <div class="small" style="margin-top:auto"><button id="b-again">Rejouer (mêmes équipes)</button></div>
+  <button class="ghost" id="b-home">Retour à l'accueil</button>
+</section>
+
+</main>
+
+<div class="overlay" id="ov-rules" style="align-items:flex-start;overflow-y:auto">
+ <div class="panel" style="max-width:520px;margin:auto">
+  <h2>Les règles du 5<sup style="font-size:.5em">e</sup> Regard</h2>
+  <div id="rules-body"></div>
+  <button id="b-rules-close">J'ai compris</button>
+ </div>
+</div>
+
+<div class="overlay" id="ov"><div class="panel">
+ <div id="ov-main" style="display:flex;flex-direction:column;gap:12px">
+  <h2>Pause</h2><p class="mut" style="margin:0">Le chrono est arrêté. La carte reste cachée.</p>
+  <button id="b-resume">Reprendre</button>
+  <div id="ov-card" style="display:flex;flex-direction:column;gap:12px" hidden>
+    <div class="row"><button class="ghost" id="b-edit">Éditer la carte</button><button class="ghost" id="b-del">Supprimer la carte</button></div>
+  </div>
+  <button class="ghost" id="b-quit">Abandonner la partie</button>
+ </div>
+ <div id="ov-edit" style="display:flex;flex-direction:column;gap:8px" hidden>
+  <h2>Éditer la carte</h2>
+  <label for="ed-t">Mot à faire deviner</label><input id="ed-t">
+  <label for="ed-x">Explication (indice)</label><textarea id="ed-x" rows="3"></textarea>
+  <div class="row" style="margin-top:6px"><button class="ghost" id="ed-cancel">Annuler</button><button id="ed-save">Enregistrer</button></div>
+ </div>
+ <div id="ov-del" style="display:flex;flex-direction:column;gap:12px" hidden>
+  <h2>Supprimer la carte ?</h2>
+  <p style="margin:0">« <b id="del-term"></b> » sera retirée définitivement du jeu et remplacée par une nouvelle carte en fin de paquet.</p>
+  <div class="row"><button class="ghost" id="del-cancel">Annuler</button><button class="no" id="del-ok">Supprimer</button></div>
+ </div>
+</div></div>
+
+<script>
+{
+const POOL=[
+["30/2", "RCP adulte : 30 compressions pour 2 insufflations · 05PR04", 0],
+["15/2", "RCP enfant et nourrisson : 15 compressions pour 2 insufflations · 05PR04", 1],
+["3 pour 1", "RCP du nouveau-né à la naissance : 3 compressions pour 1 insufflation · LOGI 05", 2],
+["100 à 120 par minute", "Fréquence des compressions thoraciques · 05FT10", 3],
+["5 cm", "Profondeur des compressions chez l'adulte, sans dépasser 6 cm · 05FT10", 4],
+["Un tiers du thorax", "Enfoncement chez l'enfant (≈ 5 cm) et le nourrisson (≈ 4 cm) · 05FT10", 5],
+["2 minutes", "Relais du sauveteur au massage cardiaque · 05PR04", 7],
+["10 secondes", "Durée maximale de la recherche de la respiration (et du pouls) · 04FT07", 9],
+["6 mouvements par minute", "Respiration agonique si ≤ 6 mvts/min (moins de 1 en 10 s) · 05AC05", 10],
+["Ventilation agonique", "Mouvements inefficaces, bruyants, anarchiques et lents · 05AC05", 11],
+["Pouls fémoral", "Pouls recherché chez le nourrisson · 04FT09", 12],
+["Pouls carotidien", "Pouls recherché chez l'adulte et l'enfant · 04FT09", 13],
+["10 insufflations par minute", "Pouls présent sans ventilation : adulte et enfant (20 nourrisson, 30 nouveau-né) · 05PR04", 14],
+["Pince C-E", "Prise du masque de l'insufflateur : pouce et index en C, 3 doigts en E · 05FT11", 22],
+["Canule oropharyngée", "Taille : distance incisives - angle de la mandibule · 05FT14", 28],
+["Charrière", "Unité de diamètre des sondes d'aspiration : 1 CH = 1/3 mm · 05FT15", 30],
+["350 à 500 mmHg", "Dépression d'aspiration chez l'adulte · 05FT15", 31],
+["Dix secondes d'aspiration", "Durée maximale chez l'adulte (5 s dans les autres cas) · 05FT15", 32],
+["5 à 10 cm sous l'aisselle", "Position de l'électrode gauche du DAE (adulte et enfant) · 05FT16", 34],
+["Sous la clavicule droite", "Position de la première électrode du DAE · 05FT16", 35],
+["Antéro-postérieure", "Position des électrodes chez le nourrisson et l'enfant de moins de 25 kg · 05FT16", 37],
+["Un travers de main", "Distance entre électrode et stimulateur cardiaque implanté · 05FT16", 39],
+["Timbre médicamenteux", "Patch à retirer avant de coller l'électrode · 05FT16", 40],
+["Premier regard", "Appréciation globale de la situation et des dangers · 04AC01", 42],
+["Deuxième regard", "Identifier une menace vitale et la plainte principale · 04AC01", 43],
+["Troisième regard", "Évaluation hiérarchisée des 3 fonctions vitales · 04AC01", 44],
+["Quatrième regard", "Interrogatoire, examen, mesure des paramètres · 04AC01", 45],
+["PQRST", "Analyse d'une plainte : Provoqué, Qualité, Région, Sévérité, Temps · 04PR04", 47],
+["MHTAF", "Antécédents : Médicaux, Hospitalisations, Traitements, Allergies, Facteurs de risque · 04PR04", 48],
+["Toutes les 5 minutes", "Surveillance des paramètres en cas de détresse vitale (sinon 10 à 15 min) · 04PR05", 49],
+["Attention pour tourner… Tournez !", "Commandement du retournement à deux secouristes · 04FT01", 50],
+["Retournement à deux", "Systématique en équipe si suspicion de traumatisme du rachis · 04FT01", 51],
+["Retrait du casque", "À deux secouristes dans tous les cas · 04FT03", 52],
+["Bascule prudente de la tête", "LVA chez une victime non traumatisée · 04FT04", 53],
+["Position neutre", "Position de la tête du nourrisson pour la LVA · 04FT04", 54],
+["Élévation du menton", "LVA chez une victime suspecte d'un traumatisme du rachis · 04FT05", 55],
+["12 à 20 par minute", "Fréquence respiratoire normale de l'adulte · 04FT07", 56],
+["20 à 30 par minute", "Fréquence respiratoire normale de l'enfant · 04FT07", 57],
+["40 à 60 par minute", "Fréquence respiratoire normale du nouveau-né · 04FT07", 58],
+["60 à 100 par minute", "Fréquence cardiaque normale de l'adulte · 04FT09", 59],
+["100 à 160 par minute", "Fréquence cardiaque normale du nourrisson · 04FT09", 60],
+["Six secondes", "Respiration normale : pas de pause plus longue · 04FT07", 61],
+["94 à 100 %", "SpO2 normale · 04FT08", 62],
+["Monoxyde de carbone", "Fausse la SpO2 en donnant des valeurs rassurantes · 04FT08", 63],
+["Plus de 2 secondes", "TRC : signe de détresse circulatoire · 05AC08", 66],
+["100/80 mmHg", "Pression artérielle normale de l'adulte au repos · 04FT09", 67],
+["Pression à la base de l'ongle", "Seule stimulation douloureuse autorisée · 04FT12", 71],
+["Score de Glasgow", "De 3 (coma aréactif) à 15 (conscient) · 04FT12", 72],
+["Plus de 12", "Score de Glasgow normal · 04FT12", 73],
+["FAST", "Face, Arm, Speech, Time : score de reconnaissance de l'AVC · 04FT12", 74],
+["0,6 g/l", "Seuil d'hypoglycémie (= 3,3 mmol/l = 60 mg/dl) · 04FT13", 76],
+["Collecteur OPTC", "Pour les objets piquants, tranchants, coupants · 04FT13", 78],
+["36,5 à 37,5 °C", "Température corporelle normale · 04FT14", 80],
+["EVS", "Échelle verbale simple de 0 à 4 : traitement si ≥ 2 · 04FT16", 82],
+["Échelle numérique", "De 0 à 10 : prise en charge de la douleur si ≥ 4 · 04FT16", 83],
+["89 %", "Seuil de SpO2 chez l'insuffisant respiratoire chronique · 05AC07", 88],
+["Balancement thoraco-abdominal", "Thorax et abdomen bougent en sens opposé · 05AC07", 89],
+["Tirage", "Contraction des muscles du haut du thorax et du cou · 05AC07", 90],
+["Cyanose", "Coloration bleutée : doigts, lobes des oreilles, lèvres · 05AC07", 91],
+["Position demi-assise", "Pour la victime consciente en détresse respiratoire · 05PR08", 92],
+["Marbrures", "Signe de détresse circulatoire, surtout devant les genoux · 05AC08", 93],
+["90 mmHg", "PA systolique en dessous : détresse circulatoire · 05AC08", 95],
+["Allongée horizontale", "Position de la victime en détresse circulatoire · 05PR09", 96],
+["Asymétrie des pupilles", "Signe de détresse neurologique · 05AC09", 97],
+["200 bar", "Pression d'une bouteille d'oxygène pleine · 05AC01", 99],
+["Masque haute concentration", "60 à 90 % d'O2, débit initial 15 L/min, jamais sous 6 L/min · 05FT01", 104],
+["9 L/min", "Débit initial du masque simple (plage 9 à 6) · 05FT01", 106],
+["Lunettes à oxygène", "1 à 6 L/min, débit initial 2 L/min · 05FT01", 107],
+["Drépanocytose", "Crise douloureuse : indication d'oxygène · 05FT01", 109],
+["Ballon-réserve", "O2 proche de 85 % dans l'insufflateur, jamais aplati · 05FT13", 110],
+["Hyperoxie", "Excès d'oxygène, à éviter (AVC, maladie cardiaque) · 05FT01", 111],
+["Garrot", "Sur un membre, entre la plaie et la racine, jamais sur une articulation · 05FT04", 112],
+["5 à 7 cm", "Distance idéale entre le garrot et la plaie · 05FT04", 113],
+["1,50 m", "Longueur minimale d'un garrot improvisé (3 à 5 cm de large) · 05FT04", 114],
+["Heure de pose", "À noter lisiblement sur le garrot · 05FT04", 115],
+["Gaze hémostatique", "Zone non garrotable, jamais retirée · 05FT05", 116],
+["Contre-appui", "Pansement compressif du cou appuyé sur l'aisselle opposée · 05FT03", 118],
+["Pansement israélien", "Exemple de pansement compressif d'urgence · 05FT03", 119],
+["Côté gauche", "Position de la femme enceinte qui saigne · 05PR02", 121],
+["Claques dans le dos", "1 à 5, entre les omoplates, talon de la main · 05FT07", 124],
+["Compressions abdominales", "1 à 5, poing juste au-dessus du nombril · 05FT08", 125],
+["Obstruction partielle", "La victime parle, tousse : encourager à tousser · 05PR03", 127],
+["État de mal convulsif", "Crises qui s'enchaînent : urgence médicale · 06AC04", 129],
+["Ne rien mettre dans la bouche", "Pendant une crise convulsive : elle n'avalera pas sa langue · 06PR04", 130],
+["Refroidissement actif", "Crise convulsive du nourrisson avec fièvre · 06PR04", 131],
+["Aérosol doseur", "Traitement de la crise d'asthme · 06AC05", 132],
+["4 morceaux de sucre", "Resucrage de l'adulte (2 à 3 pour l'enfant) · 06PR06", 133],
+["Œdème de Quincke", "Gonflement du visage et de la gorge, voix rauque · 06AC07", 135],
+["Anaphylaxie", "Réaction allergique grave · 06AC07", 136],
+["Auto-injecteur d'adrénaline", "AIA : 2e injection possible après 5 minutes · 06PR07", 137],
+["Staying Alive", "Application qui alerte les citoyens d'un arrêt cardiaque proche · 01AC01", 146],
+["Réaction de stress", "Réponse urgente d'adaptation pour fuir ou se défendre · 01AC03", 153],
+["CUMP", "Cellule d'urgence médico-psychologique · 01AC03", 157],
+["Secret professionnel", "Les secouristes y sont tenus, comme les soignants · 01AC03", 158],
+["Vouvoiement", "Pour l'adulte, appelé par son nom ; tutoiement pour l'enfant · 01AC03", 161],
+["Empathie", "Véritable compétence professionnelle, pas seulement une qualité · 01AC03", 163],
+["Interlocuteur principal", "Un seul membre de l'équipe dialogue avec la victime · 01PR01", 164],
+["Question ouverte", "« Pouvez-vous me dire ce qu'il se passe ? » · 01PR01", 165],
+["Ne pas mentir", "Ni faire de promesses impossibles à tenir · 01PR01", 168],
+["MIN", "Mort inattendue et inexpliquée du nourrisson · 12AC01", 175],
+["DSA", "Défibrillateur semi-automatique · 12AC01", 176],
+["DEA", "Défibrillateur entièrement automatisé · 12AC01", 177],
+["MID", "Matelas immobilisateur à dépression · 12AC01", 178],
+["VHB", "Virus de l'hépatite B · 12AC01", 179],
+["Désinfectant", "Utilisé sur surface propre pour tuer les micro-organismes · 12AC01", 181],
+["Sidération", "Incapacité d'agir et de penser, comme « anesthésié » · 01AC04", 187],
+["Flashback", "Souvenir envahissant de l'événement · 01AC04", 188],
+["Hypervigilance", "Comme si l'événement allait se reproduire · 01AC04", 189],
+["Stress post-traumatique", "Trouble persistant au-delà d'un mois · 01AC04", 192],
+["Burn-out", "Épuisement professionnel : épuisement émotionnel, déshumanisation · 01AC04", 194],
+["Écoute active", "Questionnement et reformulation, sans jugement · 01FT03", 208],
+["Gants de manutention", "Protègent des plaies par objets tranchants · 02AC01", 233],
+["Suraccident", "Accident supplémentaire à éviter en protégeant la zone · 02PR01", 238],
+["Dégagement d'urgence", "Soustraire la victime à un danger réel, vital, immédiat, non contrôlable · 02FT01", 240],
+["Gilet haute visibilité", "À mettre avant même de quitter le véhicule · 02PR02", 251],
+["150 à 200 m", "Distance de balisage de part et d'autre d'un accident · 02PR02", 252],
+["Intoxication au CO", "Plusieurs malaises, maux de tête et vomissements dans un local · 02PR02", 256],
+["18", "Numéro des sapeurs-pompiers · 12AC02", 266],
+["15", "Numéro du SAMU · 12AC02", 267],
+["112", "Numéro d'urgence valable dans toute l'Union européenne · 12AC02", 268],
+["114", "Urgence par visio, tchat, images, SMS : sourds, malentendants… · 12AC02", 269],
+["SNA", "Signal national d'alerte : confinement ou évacuation · 12AC03", 276],
+["AEV", "Accident d'exposition à un risque viral : piqûre, coupure, projection · 03AC01", 292],
+["VIH, VHB, VHC", "Les trois virus dont la transmission par le sang est prouvée · 03AC01", 293],
+["Soluté de Dakin", "Dérivé chloré stable pour l'asepsie après un AEV · 03PR01", 297],
+["Sérum physiologique", "Rinçage des yeux au moins 5 minutes après projection · 03PR01", 300],
+["Double gantage", "En cas d'hémorragie externe · 03AC02", 306],
+["FFP2", "Masque de protection respiratoire avant d'entrer dans la pièce · 03PR03", 344],
+["Masque chirurgical", "Porté par la victime pour limiter la dissémination · 03PR03", 345],
+["Surblouse", "Protège les vêtements des projections · 03FT08", 347],
+["Perte de connaissance", "Ne répond pas, ne réagit pas, mais respire · 05AC06", 353],
+["Chute de la langue", "Obstrue les voies aériennes d'une victime sans connaissance sur le dos · 05AC06", 354],
+["PLS à un secouriste", "Perte de connaissance non traumatique · 05PR06", 356],
+["PLS à deux secouristes", "Victime traumatisée, uniquement après avis médical · 05FT17", 358],
+["PLS sur le côté gauche", "PLS de la femme enceinte ou de la victime obèse · 05PR06", 359],
+["Sur le côté atteint", "PLS d'une victime avec lésion du thorax ou d'un membre · 05FT17", 361],
+["Bras à angle droit", "Bras côté retournement, paume vers le haut · 05FT18", 364],
+["Hanche et genou à angle droit", "Position de la jambe du dessus en PLS · 05FT18", 366],
+["Bouche ouverte", "Pour l'écoulement des liquides en PLS · 05FT18", 367],
+["Malaise vagal", "Étourdissement, sueurs, points noirs devant les yeux · 06PR01", 380],
+["Malaise orthostatique", "Malaise au passage en position debout · 06PR01", 381],
+["Cuisses fléchies", "Contusion, plaie grave ou douleur violente de l'abdomen · 06FT01", 385],
+["10 s d'apnée après le spray", "Retenir sa respiration après un spray buccal · 06FT02", 390],
+["DAI", "Dispositif auto-injectable, ex. d'adrénaline · 06FT02", 391],
+["Face externe de la cuisse", "Site d'injection du DAI, à mi-distance hanche-genou · 06FT02", 392],
+["Manœuvres physiques", "Contre-pression pour éviter une perte de connaissance vagale · 06FT03", 399],
+["Recouvrir les 2 yeux", "Position d'attente pour une plaie de l'œil · LOGI 08", 403],
+["Infarctus", "Occlusion d'une artère coronaire, risque de fibrillation ventriculaire · 06AC02", 404],
+["Fissuration de l'aorte", "Douleur thoracique avec risque d'hémorragie interne · 06AC02", 405],
+["Embolie pulmonaire", "Occlusion d'une artère pulmonaire · 06AC02", 406],
+["Pneumothorax", "Décollement du poumon · 06AC02", 407],
+["Douleur en étau", "Qualité typique d'une douleur thoracique cardiaque · 06AC02", 410],
+["Irradiation", "Douleur qui s'étend au cou, à la mâchoire, aux bras · 06AC02", 411],
+["Électrocardiogramme", "À réaliser devant une douleur thoracique sans détresse · 06PR02", 414],
+["AVC", "Déficit neurologique soudain d'origine vasculaire · 06AC03", 415],
+["2 à 3 heures", "Délai pour un traitement très efficace de l'AVC · 06AC03", 418],
+["AIT", "Accident ischémique transitoire : jamais plus d'une heure · 06AC03", 421],
+["Hypoglycémie", "Peut simuler un AVC : mesurer la glycémie · 06AC03", 426],
+["Strictement horizontale", "Position d'une victime d'AVC consciente · 06PR03", 428],
+["Brûlure simple", "Rougeur chez l'adulte ou cloque de moins d'une demi-paume · 07AC01", 431],
+["Brûlure circulaire", "Fait le tour du cou ou d'un membre : grave · 07AC01", 433],
+["Brûlure chimique", "Toujours grave, comme électrique ou radiologique · 07AC01", 435],
+["Phlyctène", "Autre nom de la cloque · 07AC01", 436],
+["Règle de Wallace", "Évaluer l'étendue d'une brûlure chez l'adulte · 07AC01", 439],
+["1 %", "Surface de la main de la victime, paume et doigts · 07AC01", 440],
+["20 %", "Surface brûlée maximale pour arroser chez l'adulte · 07PR01", 445],
+["10 %", "Surface brûlée maximale pour arroser chez l'enfant · 07PR01", 446],
+["Eau tempérée à faible pression", "Pour refroidir une brûlure · 07PR01", 449],
+["Gel d'eau", "Compresses stériles en l'absence de point d'eau · 07PR01", 450],
+["Retirer les bijoux", "En arrosant une brûlure · 07PR01", 451],
+["Couverture isotherme", "Le brûlé grave risque l'hypothermie · 07PR01", 454],
+["Jusqu'à disparition de la douleur", "Refroidissement d'une brûlure simple · 07PR01", 456],
+["Lentilles de contact", "À retirer pendant le rinçage d'un œil · 07PR01", 458],
+["Tétanos", "Maladie parfois mortelle après toute plaie, même minime · 07AC02", 461],
+["Contusion", "Choc qui rompt les vaisseaux sous la peau · 07AC02", 464],
+["Hématome", "Sang dans les tissus sous la peau : coloration violette · 07AC02", 465],
+["Écorchure", "Plaie superficielle, rouge et suintante, par friction · 07AC02", 466],
+["Plaie punctiforme", "En forme de point, souvent profonde et grave · 07AC02", 467],
+["Lacération", "Déchirure complexe par arrachement ou écrasement · 07AC02", 468],
+["Fracture ouverte", "Plaie de l'intérieur vers l'extérieur · 07AC02", 469],
+["Liquide sous pression", "Plaie par injection : toujours grave, chirurgie urgente · 07AC02", 470],
+["Champ stérile humidifié", "Protège une plaie grave (sauf thorax) · 07PR02", 476],
+["Par la couronne", "Saisir une dent tombée, jamais par la racine · 07PR02", 478],
+["Lait de vache", "Conserver une dent, ou dans la salive · 07PR02", 480],
+["Mordre la compresse", "Arrêter un saignement de la bouche · 07PR02", 482],
+["Contact direct avec la glace", "À éviter : risque de gelure · 07FT04", 503],
+["Entorse", "Élongation ou déchirure de ligaments après un faux mouvement · 07AC07", 511],
+["Luxation", "Articulation déboîtée, perte complète des rapports articulaires · 07AC07", 512],
+["Fracture compliquée", "Avec lésions associées, plaie ou déplacement · 07AC07", 513],
+["Craquement", "Perçu par la victime au moment du choc · 07AC07", 515],
+["Fourmillements", "Signe d'une lésion des nerfs à l'extrémité du membre · 07AC07", 516],
+["Écharpe simple", "Main, poignet, avant-bras · 07FT06", 528],
+["Contre-écharpe", "Avec l'écharpe simple pour un traumatisme du bras · 07FT06", 529],
+["Écharpe oblique", "Traumatisme de l'épaule (clavicule, omoplate) · 07FT06", 530],
+["Réalignement", "Sur avis médical si membre froid, pâle, insensible · 07FT07", 533],
+["Traction douce", "Ramener progressivement le membre dans l'axe · 07FT07", 534],
+["Articulations sus et sous-jacentes", "À englober dans toute immobilisation · 07FT08", 538],
+["Attelle à traction", "Cuisse et 2/3 supérieurs de la jambe, en présence d'un médecin · 07FT10", 543],
+["Moelle épinière", "Sa possible atteinte fait la gravité du traumatisme du rachis · 07AC08", 551],
+["Réponses non fiables", "Conscience altérée, alcool, douleur distrayante → immobiliser · 07PR08", 557],
+["Priapisme", "Érection : signe d'atteinte de la moelle · 07PR08", 559],
+["Raideur de la nuque", "Signe d'atteinte du rachis · 07PR08", 560],
+["Plus de 65 ans", "Avec un traumatisme à haut risque : immobiliser · 07PR08", 567],
+["Ostéoporose", "Antécédent à risque pour le rachis · 07PR08", 568],
+["Brancard cuillère", "Préféré au plan dur pour relever une victime au sol · 07PR08", 576],
+["Plan dur", "Réservé à l'extraction, exceptionnellement à l'immobilisation · 07PR08", 577],
+["Attelle cervico-thoracique", "ACT : immobilise tête, nuque et dos pour l'extraction · 07FT13", 585],
+["Mains sur les cuisses", "Jamais le bras au-dessus de la tête pour le plan dur · 07FT14", 595],
+["Sangle-araignée", "Solidarise la victime sur le plan dur · 07FT14", 599],
+["Demi-assise dans le MID", "Possible pour une détresse respiratoire · 07FT15", 607],
+["Transfixiant", "Corps étranger qui traverse de part en part : le laisser · 07PR06", 614],
+["Perte de connaissance secondaire", "À surveiller après un traumatisme crânien · 07AC09", 621],
+["Hématome en lunettes", "Fracture de la base du crâne · 07AC09", 622],
+["Otorragie", "Saignement de l'oreille : compression inutile · 07AC09", 623],
+["Épistaxis", "Saignement de nez · 07AC09", 624],
+["Céphalées", "Maux de tête après un traumatisme crânien · 07AC09", 625],
+["Amnésie des faits", "Évoque une perte de connaissance passagère · 07AC09", 626],
+["Blast", "Lésions par explosion · 07AC04", 634],
+["Hématémèse", "Vomissement de sang rouge · 07AC04", 635],
+["Abdomen dur", "Signe de traumatisme abdominal à la palpation · 07AC04", 636],
+["Éviscération", "Ne pas remettre les viscères en place · 07PR04", 637],
+["Hémothorax", "Sang qui comprime le poumon · 07AC05", 640],
+["Polytraumatisme", "Lésions associées multiples · 07AC05", 642],
+["Sang dans les urines", "Atteinte de la vessie ou de l'urètre · 07AC10", 649],
+["Perte de connaissance et détresse circulatoire", "Toujours suspecter un traumatisme du bassin · 07AC10", 651],
+["Ceinture pelvienne", "Contention du bassin si détresse circulatoire · 07FT16", 653],
+["Grands trochanters", "Repère latéral de la ceinture pelvienne · 07FT16", 655],
+["Électrisation", "Lésions dues au passage du courant dans le corps · 08AC01", 661],
+["Électrocution", "Électrisation mortelle · 08AC01", 662],
+["Barotraumatisme", "Variation de volume des gaz dans les cavités · 08AC03", 716],
+["Coup de chaleur", "Plus de 40 °C et troubles neurologiques · 08AC05", 733],
+["Hyperthermie maligne d'effort", "Coup de chaleur d'exercice · 08AC05", 734],
+["Insolation", "Peau rouge, céphalées, température ≤ 40 °C · 08AC05", 735],
+["Refroidissement passif", "Pour toute victime : endroit frais, retirer les vêtements · 08PR06", 740],
+["39 °C", "Objectif du refroidissement actif · 08PR06", 743],
+["35 °C", "Hypothermie en dessous · 08AC06", 754],
+["Hypothermie légère", "35 à 32 °C : consciente, frissons permanents · 08AC06", 755],
+["Hypothermie modérée", "32 à 28 °C : plus de frissons, rigidité modérée · 08AC06", 756],
+["Hypothermie sévère", "28 à 24 °C : perte de connaissance, très sensible aux mobilisations · 08AC06", 757],
+["Moins de 24 °C", "Hypothermie grave : arrêt cardiaque apparent · 08AC06", 758],
+["Trois chocs", "Maximum de défibrillations sous 30 °C · 08PR07", 765],
+["Gelure du 1er degré", "Insensible, rouge, sans cloques, récupère au réchauffement · 08AC07", 770],
+["Gelure du 2e degré", "Cloques à liquide clair, phalanges bleues · 08AC07", 771],
+["Gelure du 3e degré", "Bleuté ou noirâtre, cloques sanglantes, amputation fréquente · 08AC07", 772],
+["Gelure du 4e degré", "Main ou avant-pied entier, sans cloques : amputation · 08AC07", 773],
+["Ne pas faire vomir ni boire", "Intoxication par ingestion · 08PR09", 801],
+["Myosis", "Pupilles serrées : signe d'intoxication aux opiacés · 08PR09", 802],
+["Naloxone", "Antagoniste des opiacés en spray nasal · 08PR09", 804],
+["Sucer de la glace", "Piqûre dans la bouche ou la gorge · 08PR11", 818],
+["Eau de mer", "Rincer une piqûre de méduse, jamais d'eau douce · 08PR11", 819],
+["Sable et carte rigide", "Racler une piqûre de méduse sans frotter · 08PR11", 821],
+["Syndrome de suspension", "Suspendu immobile à la verticale plus de 5 minutes · 08AC10", 830],
+["37 à 41 semaines", "Terme normal d'un accouchement (aménorrhée) · 08AC04", 857],
+["Moins de 37 semaines", "Accouchement prématuré · 08AC04", 858],
+["Parturiente", "Femme enceinte dont le travail a commencé · 08AC04", 859],
+["La délivrance", "3e étape : sortie du placenta, 20 à 30 min après · 08AC04", 862],
+["Poche des eaux", "Sa rupture libère un liquide normalement clair · 08AC04", 864],
+["Présentation par le siège", "Source de complications graves · 08AC04", 866],
+["Envie irrépressible de pousser", "Signe d'accouchement imminent · 08AC04", 868],
+["Carnet de maternité", "Source d'informations sur la grossesse · 08PR04", 870],
+["Moitié de la tête", "Arrêter de faire pousser à ce moment · 08PR04", 871],
+["Peau contre peau", "Nouveau-né posé sur le ventre de sa mère · 08PR05", 879],
+["1 minute de vie", "Délai minimal avant de clamper le cordon · 08PR05", 882],
+["Bonnet", "Protège la tête du nouveau-né du froid · 08PR05", 883],
+["Hypotonique", "Nouveau-né mou : pas en bonne santé · 08PR05", 885],
+["40 insufflations", "À l'air en 1 minute chez le nouveau-né en détresse · 08PR05", 886],
+["Clamps de Barr", "Deux clamps pour le cordon ombilical · 08FT01", 894],
+["Comment, où, quand", "Questions pour évaluer l'urgence suicidaire · 09PR01", 941],
+["PMA", "Poste médical avancé · 09PR01", 947],
+["Situation à nombreuses victimes", "Accident d'ampleur avec de nombreuses victimes potentielles · 11AC01", 949],
+["ORSEC", "Organisation de la réponse de sécurité civile · 11AC01", 953],
+["PRV", "Point de rassemblement des victimes, où envoyer les verts · LOGI 02", 964],
+["Raideur cadavérique", "Signe de décès certain · 11FT01", 966],
+["Relevage", "Placer une victime sur un brancard · 10AC01", 967],
+["Brancardage", "Déplacement de la victime sur le brancard · 10AC01", 968],
+["Trépied", "Un genou à terre, l'autre écarté · 10AC01", 970],
+["Dos plat", "Travailler avec les cuisses, pas avec le dos · 10AC01", 971],
+["Alèse portoir", "Toile à poignées pour transférer la victime · 10AC01", 985],
+["Aide à la marche", "Blessé léger qui tient debout, sur quelques mètres · 10FT01", 991],
+["Pont néerlandais", "Relevage latéral, secouristes enjambant la victime · 10FT07", 1008],
+["Pont amélioré", "4 porteurs, brancard glissé par un aide · 10FT07", 1009],
+["Envoyez le brancard !", "L'aide glisse le brancard sous la victime · 10FT07", 1011],
+["Arrimage obligatoire", "Toute victime avant brancardage · 10FT10", 1027],
+["Thorax, bassin, cuisses", "Passage des trois sangles d'arrimage · 10FT10", 1029],
+["SAMPLE", "Signes, Allergies, Médicaments, Passé médical, dernier repas, Événements · Mémo", 2000],
+["OPQRST", "Analyse d'un symptôme : Début, Provoqué, Qualité, Région, Sévérité, Temps · Mémo", 2001],
+["Gestité", "Nombre de grossesses de la parturiente · Mémo", 2005],
+["Parité", "Nombre d'enfants mis au monde · Mémo", 2006],
+["Éclampsie", "Fin de grossesse : convulsions, hypertension, troubles de la vision · Mémo", 2007],
+["Méningite", "Céphalées, vomissements en jets, fièvre, purpura : porter les EPI · Mémo", 2008],
+["Purpura", "Taches sur la peau, signe de gravité d'une méningite · Mémo", 2009],
+["Chien de fusil", "Position typique d'une victime de méningite · Mémo", 2010],
+["Angor", "Douleur thoracique constrictive qui cède au repos · Mémo", 2011],
+["SCA", "Syndrome coronarien aigu : comme l'angor, mais la douleur ne cède pas · Mémo", 2012],
+["OAP", "Œdème aigu du poumon : râles crépitants, mousse aux lèvres · Mémo", 2013],
+["Mydriase", "Pupilles dilatées · Mémo", 2014],
+["Phase tonique", "Crise convulsive : raideur, arrêt respiratoire, environ 30 s · Mémo", 2015],
+["Phase clonique", "Crise convulsive : secousses, morsure de langue, perte d'urine · Mémo", 2016]
+];
+const ROUNDS=[
+ {t:"Parler librement",short:"Dites tout ce que vous voulez, sans dire le mot.",r:["Le joueur peut dire tout ce qu'il veut pour faire deviner.","Interdit : un mot de la carte, un mot de la même famille, un mot qui sonne pareil, une traduction, épeler des lettres.","L'équipe peut faire autant de propositions qu'elle veut.","Interdit de passer une carte.","En cas d'interdit : « Faute », la carte retourne sous la pioche et l'équipe perd 5 secondes."]},
+ {t:"Un seul mot",short:"Un seul mot par carte, une seule proposition.",r:["Mêmes cartes que la manche 1, remélangées.","Le joueur ne dit qu'un seul mot par carte.","L'équipe ne fait qu'une seule proposition par carte (seule la première compte).","On peut passer une carte. Les cartes passées ou ratées reviennent dans la pioche pour l'équipe suivante.","Faute : la carte retourne sous la pioche et l'équipe perd 5 secondes.","Si la pioche est vide, le tour s'arrête."]},
+ {t:"Le mime",short:"Mime, bruitages et fredonnements. Pas un mot.",r:["Mêmes cartes, remélangées.","Le joueur mime. Il peut fredonner et faire des bruitages, mais pas parler.","Une seule proposition par carte.","On peut passer une carte (elle revient pour l'équipe suivante).","Faute (parler, par exemple) : la carte retourne sous la pioche et l'équipe perd 5 secondes.","Si la pioche est vide, le tour s'arrête."]}
+];
+const PEN=5;
+const flash=()=>{const c=$("p-clock");c.classList.remove("pen");void c.offsetWidth;c.classList.add("pen")};
+const $=id=>document.getElementById(id);
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let G=null,tick=null,actx=null,wake=null;
+
+function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("on",s.id===id));window.scrollTo(0,0)}
+function total(t){return t.score.reduce((a,b)=>a+b,0)}
+function scoresHTML(){const m=Math.max(total(G.teams[0]),total(G.teams[1]));return G.teams.map(t=>`<div class="sc${total(t)===m&&m>0&&total(G.teams[0])!==total(G.teams[1])?" lead":""}"><span class="mut">${esc(t.name)}</span><b>${total(t)}</b></div>`).join("")}
+
+function beep(f,d){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const o=actx.createOscillator(),g=actx.createGain();o.frequency.value=f;o.type="square";g.gain.value=.08;o.connect(g);g.connect(actx.destination);o.start();o.stop(actx.currentTime+d)}catch(e){}}
+async function keepAwake(on){try{if(on&&navigator.wakeLock)wake=await navigator.wakeLock.request("screen");else if(wake){wake.release();wake=null}}catch(e){}}
+
+function newGame(){
+  const n=+$("nb").value;
+  G={teams:[{name:$("t1").value.trim()||"Équipe 1",score:[0,0,0]},{name:$("t2").value.trim()||"Équipe 2",score:[0,0,0]}],
+     dur:+$("dur").value,cards:shuffle(live()).slice(0,n),round:0,team:0,deck:[],passed:[],cur:null,found:[],hist:[],left:0,paused:false};
+  startRound();
+}
+function startRound(){
+  G.deck=shuffle(G.cards);G.passed=[];
+  const R=ROUNDS[G.round];
+  $("r-tag").textContent=`Manche ${G.round+1} sur 3`;$("r-title").textContent=R.t;
+  $("r-rules").innerHTML=R.r.map(x=>`<li>${x}</li>`).join("");
+  $("r-scores").innerHTML=G.round?scoresHTML():"";
+  show("s-round");
+}
+function ready(){
+  const R=ROUNDS[G.round];
+  $("y-tag").textContent=`Manche ${G.round+1} · ${R.t}`;
+  $("y-team").textContent=`${G.teams[G.team].name}, à vous !`;
+  $("y-left").textContent=`${G.deck.length} carte${G.deck.length>1?"s":""} à trouver dans cette manche`;
+  $("y-rule").textContent=R.short;
+  show("s-ready");
+}
+function startTurn(){
+  G.found=[];G.hist=[];G.left=G.dur;G.end=Date.now()+G.dur*1000;
+  $("p-tag").textContent=`Manche ${G.round+1}`;$("p-team").textContent=G.teams[G.team].name;
+  $("b-pass").disabled=G.round===0;
+  beep(660,.12);keepAwake(true);
+  show("s-play");draw();runClock();
+}
+function runClock(){
+  clearInterval(tick);
+  const upd=()=>{
+    const ms=Math.max(0,G.end-Date.now()),s=Math.ceil(ms/1000);
+    if(s!==G.left&&s<=5&&s>0)beep(880,.06);
+    G.left=s;$("p-clock").textContent=s;
+    $("p-bar").firstElementChild.style.transform=`scaleX(${ms/(G.dur*1000)})`;
+    $("p-bar").classList.toggle("hot",s<=5);
+    if(ms<=0)timeUp();
+  };upd();tick=setInterval(upd,200);
+}
+function draw(){
+  if(!G.deck.length){
+    if(!G.passed.length)return endTurn(true);   // manche terminée
+    return endTurn(false,"Pioche vide");         // manches 2-3 : il ne reste que des cartes passées
+  }
+  G.cur=G.deck.shift();
+  $("p-word").textContent=G.cur[0];$("p-hint").textContent=G.cur[1];setHint(false);
+  const c=$("p-card");c.classList.remove("pop");void c.offsetWidth;c.classList.add("pop");
+  $("p-count").textContent=`${G.found.length} trouvée${G.found.length>1?"s":""} · ${G.deck.length+1} restante${G.deck.length?"s":""}`;
+  $("b-undo").disabled=!G.hist.length;
+}
+function setHint(on){$("p-hint").hidden=!on;$("b-hint").disabled=on}
+function hint(){if(!G||G.cur===null||!$("p-hint").hidden)return;G.hist.push({type:"hint"});G.end-=PEN*1000;beep(440,.1);flash();setHint(true);$("b-undo").disabled=false}
+function act(type){
+  if(!G||G.cur===null)return;
+  G.hist.push({type,card:G.cur,deck:G.deck.slice(),passed:G.passed.slice()});
+  if(type==="ok"){G.found.push(G.cur);G.teams[G.team].score[G.round]++;beep(990,.08)}
+  else if(type==="pass")G.passed.push(G.cur);
+  else if(type==="fault"){G.deck.push(G.cur);G.end-=PEN*1000;beep(220,.15);flash()}
+  G.cur=null;draw();
+}
+function undo(){
+  const h=G.hist.pop();if(!h)return;
+  if(h.type==="hint"){G.end+=PEN*1000;setHint(false);$("b-undo").disabled=!G.hist.length;return}
+  if(h.type==="ok"){G.found.pop();G.teams[G.team].score[G.round]--}
+  if(h.type==="fault")G.end+=PEN*1000;
+  if(G.cur!==null)G.deck.unshift(G.cur);
+  G.deck=h.deck;G.passed=h.passed;G.deck.unshift(h.card);G.cur=null;draw();
+}
+function timeUp(){
+  clearInterval(tick);beep(180,.6);try{navigator.vibrate&&navigator.vibrate(400)}catch(e){}
+  if(G.cur!==null){ if(G.round===0)G.deck.unshift(G.cur); else G.deck.push(G.cur) }
+  G.cur=null;endTurn(false,"Temps écoulé");
+}
+function endTurn(roundDone,why){
+  clearInterval(tick);keepAwake(false);
+  if(G.cur!==null){G.deck.unshift(G.cur);G.cur=null}
+  if(G.round>0&&G.passed.length){G.deck=shuffle(G.deck.concat(G.passed));G.passed=[]}
+  G.roundDone=roundDone||!G.deck.length;
+  $("e-tag").textContent=G.roundDone?"Manche terminée":why;
+  $("e-title").textContent=`${G.teams[G.team].name} : ${G.found.length} carte${G.found.length>1?"s":""}`;
+  $("e-list").innerHTML=G.found.length?G.found.map(w=>`<li><b>${esc(w[0])}</b><span>${esc(w[1])}</span></li>`).join(""):`<li>Aucune</li>`;
+  $("e-scores").innerHTML=scoresHTML();
+  $("b-next").textContent=G.roundDone?(G.round===2?"Voir le résultat":"Manche suivante"):`Au tour de ${G.teams[1-G.team].name}`;
+  G.team=1-G.team;   // l'équipe suivante commence aussi la manche suivante
+  show("s-turn");
+}
+function next(){
+  if(!G.roundDone)return ready();
+  if(G.round===2)return finish();
+  review();
+}
+function review(){
+  const list=G.cards.slice().sort((a,b)=>a[0].localeCompare(b[0],"fr"));
+  $("v-tag").textContent=`Pause révision · avant la manche ${G.round+2}`;
+  $("v-list").innerHTML=list.map(w=>`<li><b>${esc(w[0])}</b><span>${esc(w[1])}</span></li>`).join("");
+  $("b-review-next").textContent=`Manche ${G.round+2} : ${ROUNDS[G.round+1].t}`;
+  show("s-review");
+}
+function finish(){
+  const [a,b]=G.teams,ta=total(a),tb=total(b);
+  $("f-title").textContent=ta===tb?"Égalité !":`${(ta>tb?a:b).name} gagne !`;
+  $("f-scores").innerHTML=scoresHTML();
+  $("f-h1").textContent=a.name;$("f-h2").textContent=b.name;
+  $("f-body").innerHTML=ROUNDS.map((r,i)=>`<tr><td>${i+1}. ${r.t}</td><td>${a.score[i]}</td><td>${b.score[i]}</td></tr>`).join("")+`<tr><td><b>Total</b></td><td><b>${ta}</b></td><td><b>${tb}</b></td></tr>`;
+  show("s-end");
+}
+function pause(){if(!G)return;clearInterval(tick);G.rest=G.end-Date.now();$("p-card").style.visibility="hidden";ovMode("main");$("ov").classList.add("on")}
+function resume(){$("ov").classList.remove("on");$("p-card").style.visibility="";G.end=Date.now()+G.rest;runClock();if(G.cur===null)draw()}
+// ---- cartes éditées ou supprimées (gardées d'une partie à l'autre) ----
+let OV={},db=null;
+function live(){return POOL.filter(c=>!(OV[c[2]]&&OV[c[2]].d==="rm")).map(c=>{const o=OV[c[2]];return o&&o.d==="ed"?[o.t,o.x,c[2]]:c})}
+function updCount(){$("nb-cards").textContent=live().length}
+function saveOV(id,val){
+  OV[id]=val;try{localStorage.setItem("tm-ov",JSON.stringify(OV))}catch(e){}
+  if(db)db.collection("cartes").doc(String(id)).set(val).catch(()=>{});
+  updCount();
+}
+function splitX(x){const k=x.lastIndexOf(" · ");return k<0?[x,""]:[x.slice(0,k),x.slice(k+3)]}
+function ovMode(m){
+  $("ov-main").hidden=m!=="main";$("ov-edit").hidden=m!=="edit";$("ov-del").hidden=m!=="del";
+  $("ov-card").hidden=!(G&&G.round===0&&G.cur);
+}
+function openEdit(){const [ex]=splitX(G.cur[1]);$("ed-t").value=G.cur[0];$("ed-x").value=ex;ovMode("edit");$("ed-t").focus()}
+function saveEdit(){
+  const t=$("ed-t").value.trim();if(!t)return $("ed-t").focus();
+  const id=G.cur[2],fi=splitX(G.cur[1])[1],x=$("ed-x").value.trim()+(fi?" · "+fi:"");
+  const nc=[t,x,id];saveOV(id,{d:"ed",t,x,at:Date.now()});
+  G.cards=G.cards.map(c=>c[2]===id?nc:c);G.cur=nc;
+  $("p-word").textContent=t;$("p-hint").textContent=x;ovMode("main");
+}
+function openDel(){$("del-term").textContent=G.cur[0];ovMode("del")}
+function confirmDel(){
+  const id=G.cur[2];saveOV(id,{d:"rm",at:Date.now()});
+  G.cards=G.cards.filter(c=>c[2]!==id);
+  const used=new Set(G.cards.map(c=>c[2])),cand=live().filter(c=>!used.has(c[2]));
+  if(cand.length){const nc=cand[Math.floor(Math.random()*cand.length)];G.cards.push(nc);G.deck.push(nc)}
+  G.cur=null;G.hist=[];$("b-undo").disabled=true;ovMode("main");
+}
+$("b-edit").onclick=openEdit;$("ed-cancel").onclick=()=>ovMode("main");$("ed-save").onclick=saveEdit;
+$("b-del").onclick=openDel;$("del-cancel").onclick=()=>ovMode("main");$("del-ok").onclick=confirmDel;
+try{Object.assign(OV,JSON.parse(localStorage.getItem("tm-ov")||"{}"))}catch(e){}
+updCount();
+(async()=>{try{
+  const d=window.claude&&await window.claude.use("db");if(!d)return;db=d;let first=true;
+  db.collection("cartes").onSnapshot(s=>{
+    const f={};s.forEach(doc=>{f[doc.id]=doc.data()});
+    if(first){for(const k in OV)if(!f[k]){f[k]=OV[k];db.collection("cartes").doc(k).set(OV[k]).catch(()=>{})}first=false}
+    OV=f;try{localStorage.setItem("tm-ov",JSON.stringify(OV))}catch(e){}updCount();
+  },()=>{});
+}catch(e){}})();
+
+$("b-start").onclick=newGame;
+$("b-round").onclick=ready;
+$("b-go").onclick=startTurn;
+$("b-ok").onclick=()=>act("ok");
+$("b-pass").onclick=()=>act("pass");
+$("b-fault").onclick=()=>act("fault");
+$("b-undo").onclick=undo;
+$("b-review-next").onclick=()=>{G.round++;startRound()};
+$("b-rules").onclick=()=>{
+  $("rules-body").innerHTML=`
+  <h3>Le but</h3>
+  <p>Deux équipes font deviner les mêmes cartes, tirées du référentiel PSE 2026, pendant 3 manches. Chaque carte trouvée rapporte 1 point. L'équipe qui a le plus de points à la fin des 3 manches gagne.</p>
+  <h3>Le déroulement</h3>
+  <ul class="rules">
+   <li>Avant de lancer, choisissez les noms des équipes, la durée d'un tour (30, 45 ou 60 s) et le nombre de cartes (20, 30 ou 40).</li>
+   <li>À chaque tour, un joueur prend le téléphone et fait deviner un maximum de cartes à son équipe avant la fin du chrono. Puis le téléphone passe à l'autre équipe.</li>
+   <li>Une manche se termine quand toutes les cartes ont été trouvées. Une pause révision permet alors de relire toutes les cartes avec leur indice. La manche suivante commence avec l'équipe qui n'a pas joué en dernier.</li>
+   <li>Les mêmes cartes servent pour les 3 manches : ce qu'on a entendu en manche 1 aide pour les suivantes.</li>
+  </ul>
+  ${ROUNDS.map((r,i)=>`<h3>Manche ${i+1} : ${r.t}</h3><ul class="rules">${r.r.map(x=>`<li>${x}</li>`).join("")}</ul>`).join("")}
+  <h3>Les boutons</h3>
+  <ul class="rules">
+   <li><b>Trouvé</b> : l'équipe a trouvé, +1 point, carte suivante.</li>
+   <li><b>Passer</b> : la carte revient dans la pioche (impossible en manche 1).</li>
+   <li><b>Faute −5 s</b> : un interdit a été commis. La carte retourne sous la pioche et l'équipe perd 5 secondes.</li>
+   <li><b>Indice −5 s</b> : affiche une explication sous la carte, contre 5 secondes.</li>
+   <li><b>Annuler</b> : revient sur la dernière action (et rend les secondes perdues).</li>
+   <li><b>Pause</b> : arrête le chrono et cache la carte. En manche 1, elle permet aussi d'éditer ou de supprimer la carte en cours (une carte supprimée est remplacée par une nouvelle en fin de paquet).</li>
+  </ul>
+  <h3>Les chiffres</h3>
+  <p>Pour une carte chiffrée (« 30/2 », « 5 à 7 cm »…), l'équipe doit donner la valeur exacte.</p>`;
+  $("ov-rules").classList.add("on");$("ov-rules").scrollTop=0;
+};
+$("b-rules-close").onclick=()=>$("ov-rules").classList.remove("on");
+$("b-hint").onclick=hint;
+$("b-next").onclick=next;
+$("b-pause").onclick=pause;
+$("b-resume").onclick=resume;
+$("b-quit").onclick=()=>{$("ov").classList.remove("on");$("p-card").style.visibility="";keepAwake(false);G=null;show("s-setup")};
+$("b-again").onclick=newGame;
+$("b-home").onclick=()=>{G=null;show("s-setup")};
+}
+</script>
+</body>
+</html>
