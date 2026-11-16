@@ -11,6 +11,7 @@ baseurl: "/osr"
 exclude:
   - trivial-pse/
   - 5e-regard/
+  - referentiel-pse/
   - site-root/
   - Gemfile
   - Gemfile.lock
