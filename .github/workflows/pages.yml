@@ -50,7 +50,7 @@ jobs:
         # Racine : redirection vers /osr/ + pages autonomes à leur adresse actuelle
         run: |
           cp -r site-root/. _site/
-          for d in trivial-pse 5e-regard referentiel-pse; do
+          for d in trivial-pse 5e-regard referentiel-pse ose; do
             if [ -d "$d" ]; then cp -r "$d" _site/; fi
           done
       - name: Upload artifact
