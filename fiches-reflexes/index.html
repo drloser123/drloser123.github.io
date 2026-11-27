@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fiches réflexes PCPS</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* Même carnet que le référentiel PSE : blanc, encre bleu nuit, recherche bleue en haut ; accents orange Protection Civile */
+:root{color-scheme:light;--bg:#fff;--bg2:#f3f6f9;--ink:#14202c;--mut:#5b6876;--line:#dbe2e9;--blue:#1f78b4;--navy:#12235a;--or:#b35c00;--hit:#ff8a3d;--fs:17px}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif;overflow-x:clip}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:8px;min-height:44px}
+.brand{flex:1;display:flex;align-items:baseline;gap:6px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:inherit;text-decoration:none}
+.brand b{font-size:14px}
+.brand small{color:var(--mut);font-size:12px}
+.ib{width:44px;height:44px;border:0;background:transparent;border-radius:10px;display:grid;place-items:center;flex:none}
+.ib:active{background:var(--bg2)}
+.ib svg{width:24px;height:24px}
+.vtitle{flex:1;font-weight:700;font-size:15px;line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.fsz{display:flex;flex:none}
+.fsz .ib{width:40px;font-weight:700;font-size:14px}
+.sbox{position:relative;padding:0 0 6px}
+.sbox input{width:100%;height:38px;border:2px solid #48a5d8;border-radius:10px;padding:0 40px 0 36px;font-size:16px;background:#fff;color:#0d3b57}
+.sbox input::placeholder{color:#2f7fae;opacity:1}
+.sbox input:focus{border-color:var(--blue);outline:none;background:#fff;box-shadow:0 0 0 3px rgba(72,165,216,.3)}
+.sbox .mag{position:absolute;left:10px;top:10px;width:18px;height:18px;color:var(--blue)}
+.sbox .clr{position:absolute;right:0;top:-3px;display:none}
+.sbox.has .clr{display:grid}
+
+/* ---------- sommaire ---------- */
+.sumline{font-size:13.5px;color:var(--mut);margin:8px 0 0;min-height:20px}
+#list{margin:0 0 60px}
+.sec-h{position:sticky;top:var(--toph,96px);z-index:5;display:flex;align-items:center;gap:10px;background:var(--bg);padding:14px 2px 8px;border-bottom:2px solid var(--ink);margin-top:8px}
+.sec-h .n{flex:none;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:2px 7px}
+.sec-h .st{flex:1;font-weight:700;font-size:14px;line-height:1.25}
+.sec-h .pp{flex:none;font-size:12px;color:var(--mut)}
+.searching .sec-h .pp{display:none}
+.fl{list-style:none;margin:0;padding:0}
+.fl a{display:flex;align-items:flex-start;gap:10px;min-height:48px;padding:9px 2px;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.fl a:active{background:var(--bg2)}
+.tag{flex:none;width:68px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--or);padding-top:2px}
+.ftx{flex:1}
+.ftt{display:block;font-size:15px;line-height:1.3}
+.snip{display:block;font-size:13px;line-height:1.35;color:var(--mut);margin-top:3px}
+.snip mark{background:#ffd9bf;color:var(--ink);border-radius:2px}
+.cnt{flex:none;font-weight:700;font-size:12.5px;min-width:30px;text-align:center;padding:2px 8px;border-radius:999px;background:var(--hit);color:#1a0d00;display:none;font-variant-numeric:tabular-nums}
+.searching .cnt{display:block}
+.searching .fl li.zero,.searching .grp.zero{display:none}
+.empty{color:var(--mut);font-size:13.5px;padding:10px 2px;border-bottom:1px solid var(--line);margin:0}
+.nores{padding:30px 4px;color:var(--mut);text-align:center;display:none}
+.searching.none .nores{display:block}
+
+/* ---------- fiche ---------- */
+#view{display:none}
+body.v #home{display:none}
+body.v #view{display:block}
+#content{font-size:var(--fs);padding:6px 0 20px}
+.fcode{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin:12px 0 2px;font-size:.78em;color:var(--mut)}
+.fcode b{color:var(--or);font-size:1.1em}
+.pill{border:1px solid var(--line);border-radius:999px;padding:1px 9px;background:var(--bg2)}
+.ftitle{font-size:1.45em;line-height:1.18;margin:.2em 0 .5em;font-weight:700;text-wrap:balance}
+.resume{background:#fff4e3;border-left:5px solid var(--or);border-radius:10px;padding:12px 14px;margin:0 0 1em}
+.resume p{margin:0}
+#content a[href^="tel:"]{color:var(--blue);white-space:nowrap}
+.sec{font-size:1.06em;font-weight:700;margin:1.3em 0 .4em;padding-bottom:3px;border-bottom:1px solid var(--line);color:var(--navy)}
+#content ul{margin:0;padding:0;list-style:none}
+#content li{position:relative;padding-left:1.15em;margin:.38em 0}
+#content li::before{content:"•";position:absolute;left:.15em;top:0;font-weight:700;color:var(--or)}
+#content mark{background:var(--hit);color:#1a0d00;border-radius:2px;scroll-margin-top:150px;scroll-margin-bottom:90px}
+#content mark.cur{outline:3px solid var(--ink);outline-offset:1px}
+.src{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;margin:26px 0 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--blue);text-decoration:none;font-weight:700;font-size:15px}
+.pn{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin:10px 0 120px}
+.pn a{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:inherit;text-decoration:none;font-size:14px;line-height:1.25;min-height:56px;background:var(--bg2)}
+.pn a small{color:var(--mut);font-size:12px}
+.pn a.nx{text-align:right;grid-column:2}
+
+/* ---------- barre des résultats ---------- */
+#hits{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));z-index:30;display:none;align-items:center;gap:2px;background:var(--navy);color:#fff;border-radius:999px;padding:2px 6px 2px 16px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+body.v.searching #hits{display:flex}
+#hits .ib{color:#fff}
+#hits .ib:active{background:rgba(255,255,255,.15)}
+#hcount{font-size:14px;font-weight:700;min-width:54px;text-align:center;font-variant-numeric:tabular-nums}
+#up{position:fixed;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:25;background:var(--bg);border:1px solid var(--line);border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.12);display:none}
+#up.on{display:grid}
+body.v.searching #up{bottom:76px}
+
+/* ---------- verrou ---------- */
+#lock{display:none}
+body.locked #lock{display:grid;place-items:center;min-height:100vh;padding:20px}
+body.locked .top,body.locked main,body.locked #hits,body.locked #up{display:none!important}
+#lockf{width:100%;max-width:340px;display:grid;gap:12px;text-align:center}
+#lockf b{font-size:20px}
+#lockf p{margin:0;color:var(--mut);font-size:14px}
+#lockf input[type=password]{height:46px;border:2px solid #48a5d8;border-radius:10px;padding:0 12px;font-size:16px}
+#lockf input[type=password]:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(72,165,216,.3)}
+#lockf .rem{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:var(--mut)}
+#lockf .rem input{width:18px;height:18px;accent-color:var(--blue)}
+#lockf button{height:46px;border:0;border-radius:10px;background:var(--navy);color:#fff;font-weight:700;font-size:16px}
+#lockf .err{color:#c62828;font-weight:700}
+</style>
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mag" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <div class="bar">
+      <button class="ib" id="back" aria-label="Retour à la liste" hidden><svg><use href="#i-back"/></svg></button>
+      <a class="brand" id="brand" href="/"><b>Fiches réflexes</b> <small>Protection Civile Paris Seine</small></a>
+      <div class="vtitle" id="vtitle" hidden></div>
+      <div class="fsz" id="fsz" hidden>
+        <button class="ib" id="fminus" aria-label="Réduire le texte">A−</button>
+        <button class="ib" id="fplus" aria-label="Agrandir le texte">A+</button>
+      </div>
+    </div>
+    <div class="sbox" id="sbox">
+      <svg class="mag"><use href="#i-mag"/></svg>
+      <input id="q" type="search" placeholder="Rechercher dans les fiches réflexes" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Rechercher dans les fiches réflexes">
+      <button class="ib clr" id="clr" aria-label="Effacer la recherche"><svg><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="wrap">
+    <p class="sumline" id="sumline"></p>
+    <div id="list"></div>
+    <p class="nores">Aucune fiche ne contient tous ces mots.</p>
+  </section>
+  <section id="view" class="wrap">
+    <article id="content"></article>
+    <nav class="pn" id="pn"></nav>
+  </section>
+</main>
+
+<div id="hits" role="toolbar" aria-label="Résultats dans la fiche">
+  <span id="hcount">0 / 0</span>
+  <button class="ib" id="hprev" aria-label="Résultat précédent"><svg><use href="#i-up"/></svg></button>
+  <button class="ib" id="hnext" aria-label="Résultat suivant"><svg><use href="#i-down"/></svg></button>
+  <button class="ib" id="hall" aria-label="Retour aux résultats"><svg><use href="#i-x"/></svg></button>
+</div>
+<button class="ib" id="up" aria-label="Haut de page"><svg><use href="#i-up"/></svg></button>
+
+<div id="lock">
+  <form id="lockf" autocomplete="on">
+    <b>Fiches réflexes</b>
+    <p>Page réservée. Entre le mot de passe.</p>
+    <input type="text" name="username" value="fiches-reflexes" autocomplete="username" hidden>
+    <input id="pw" type="password" autocomplete="current-password" placeholder="Mot de passe" aria-label="Mot de passe" required>
+    <label class="rem"><input type="checkbox" id="rem" checked> Rester connecté sur cet appareil</label>
+    <button type="submit" id="go">Ouvrir</button>
+    <p class="err" id="err" hidden>Mot de passe incorrect.</p>
+  </form>
+</div>
+
+<script>
+// Déverrouillage : le contenu (data.enc.json) est chiffré en AES-GCM, clé dérivée du mot de passe (PBKDF2-SHA256).
+(async () => {
+  const unb64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+  const b64 = u => btoa(String.fromCharCode(...new Uint8Array(u)));
+  const KEY = "fr-cle";
+  const enc = await (await fetch("data.enc.json", {cache: "no-cache"})).json();
+  async function ouvrir(cle){
+    const pt = await crypto.subtle.decrypt({name: "AES-GCM", iv: unb64(enc.iv)}, cle, unb64(enc.data));
+    window.FICHES = JSON.parse(new TextDecoder().decode(pt));
+    document.body.classList.remove("locked");
+    start();
+  }
+  const imp = raw => crypto.subtle.importKey("raw", raw, "AES-GCM", true, ["decrypt"]);
+  try {
+    const s = localStorage.getItem(KEY) || sessionStorage.getItem(KEY);
+    if (s){ await ouvrir(await imp(unb64(s))); return; }
+  } catch(e) { try { localStorage.removeItem(KEY); sessionStorage.removeItem(KEY); } catch(_) {} }
+  document.getElementById("pw").focus();
+  document.getElementById("lockf").addEventListener("submit", async ev => {
+    ev.preventDefault();
+    const btn = document.getElementById("go"), err = document.getElementById("err");
+    btn.disabled = true; btn.textContent = "…"; err.hidden = true;
+    try {
+      const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(document.getElementById("pw").value), "PBKDF2", false, ["deriveKey"]);
+      const cle = await crypto.subtle.deriveKey({name: "PBKDF2", salt: unb64(enc.sel), iterations: enc.iter, hash: "SHA-256"}, base, {name: "AES-GCM", length: 256}, true, ["decrypt"]);
+      await ouvrir(cle);
+      try {
+        const raw = b64(await crypto.subtle.exportKey("raw", cle));
+        (document.getElementById("rem").checked ? localStorage : sessionStorage).setItem(KEY, raw);
+      } catch(e) {}
+    } catch(e) {
+      err.hidden = false; btn.disabled = false; btn.textContent = "Ouvrir";
+      document.getElementById("pw").select();
+    }
+  });
+})();
+function start(){
+const F = window.FICHES;
+const DOSSIERS = [
+  {k:"CP", t:"Chef de poste"},
+  {k:"CH", t:"Chauffeur"},
+  {k:"Maraudes", t:"Maraudes"},
+  {k:"Tous", t:"Tous les membres"}
+];
+// Ordre d'affichage : procédures d'abord, formulaires ensuite
+const ORDRE = ["DO-10-04","DO-12-03","DO-53-01","DO-46-01","DO-45-02","DO-59-01","DO-40-02","DO-38-03","DG-30-01","DO-15-05","DO-62-01","DO-24-03","DO-22-02","DO-39-05","DG-31-02","DG-19-01","DG-10-03"];
+const rang = f => { const k = ORDRE.indexOf(f.id); return k < 0 ? 999 : k; };
+const parDossier = k => F.filter(f => f.dossier === k).sort((a, b) => rang(a) - rang(b));
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+  .replace(/\b(0\d(?: \d\d){4}|0800 \d{3} \d{3}|0800 \d\d \d\d \d\d)\b/g, m => `<a href="tel:${m.replace(/ /g, "")}">${m}</a>`);
+const plain = s => s.replace(/\*\*/g, "");
+
+// Normalisation : minuscules, sans accents, apostrophes unifiées. Garde une table de correspondance des positions.
+function norm(s){
+  let out = "", map = [];
+  for (let i = 0; i < s.length; i++){
+    let c = s[i].normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+    if (c === "’" || c === "‘") c = "'";
+    if (c === "œ") c = "oe"; else if (c === "æ") c = "ae";
+    for (const ch of c){ out += ch; map.push(i); }
+  }
+  return {s: out, map};
+}
+const terms = q => norm(q).s.split(/\s+/).filter(t => t.length > 1 || /\d/.test(t));
+
+// Texte de recherche de chaque fiche
+F.forEach((f, i) => {
+  f.i = i;
+  const parts = [f.id, f.titre, f.meta || "", f.dossier, plain(f.resume)];
+  f.sections.forEach(s => { parts.push(s.h); s.li.forEach(l => parts.push(plain(l))); });
+  f.lines = parts;
+  f.text = norm(parts.join("\n")).s;
+});
+function countIn(hay, ts){
+  let n = 0;
+  for (const t of ts){
+    let k = 0, p = hay.indexOf(t);
+    while (p >= 0){ k++; p = hay.indexOf(t, p + t.length); }
+    if (!k) return 0;
+    n += k;
+  }
+  return n;
+}
+function snippet(f, ts){
+  for (const line of f.lines.slice(4).concat(f.lines.slice(0, 4))){
+    const n = norm(line), hit = ts.map(t => n.s.indexOf(t)).filter(p => p >= 0);
+    if (!hit.length) continue;
+    const p0 = Math.min(...hit);
+    let a = n.map[Math.max(0, p0 - 40)] || 0;
+    if (a > 0){ const sp = line.indexOf(" ", a); if (sp >= 0 && sp < n.map[p0]) a = sp + 1; }
+    let cut = line.slice(a, a + 150);
+    const html = highlightStr(cut, ts);
+    return (a > 0 ? "… " : "") + html + (a + 150 < line.length ? " …" : "");
+  }
+  return "";
+}
+function highlightStr(str, ts){
+  const n = norm(str), ranges = [];
+  for (const t of ts){ let p = n.s.indexOf(t); while (p >= 0){ ranges.push([n.map[p], n.map[p + t.length - 1] + 1]); p = n.s.indexOf(t, p + t.length); } }
+  ranges.sort((x, y) => x[0] - y[0]);
+  let out = "", last = 0;
+  for (const [a, b] of ranges){ if (a < last) continue; out += esc(str.slice(last, a)) + "<mark>" + esc(str.slice(a, b)) + "</mark>"; last = b; }
+  return out + esc(str.slice(last));
+}
+
+// ---------- sommaire ----------
+function buildList(){
+  $("list").innerHTML = DOSSIERS.map(d => {
+    const fs = parDossier(d.k);
+    return `<div class="grp" data-d="${d.k}"><div class="sec-h"><span class="n">${d.k}</span><span class="st">${d.t}</span><span class="pp">${fs.length || ""}</span></div>` +
+      (fs.length ? `<ul class="fl">` + fs.map(f => `<li data-i="${f.i}"><a href="#${f.id}"><span class="tag">${f.id}</span><span class="ftx"><span class="ftt">${esc(f.titre)}</span><span class="snip"></span></span><span class="cnt"></span></a></li>`).join("") + `</ul>`
+      : `<p class="empty">${d.vide}</p>`) + `</div>`;
+  }).join("");
+  $("sumline").textContent = `${F.length} fiches réflexes résumées, classées par rôle.`;
+}
+
+let Q = [];
+function search(){
+  const q = $("q").value;
+  $("sbox").classList.toggle("has", q.length > 0);
+  Q = terms(q);
+  const home = $("home");
+  home.classList.toggle("searching", Q.length > 0);
+  document.body.classList.toggle("searching", Q.length > 0);
+  let tot = 0, nf = 0;
+  document.querySelectorAll(".fl li").forEach(li => {
+    const f = F[+li.dataset.i], n = Q.length ? countIn(f.text, Q) : 0;
+    li.classList.toggle("zero", Q.length > 0 && !n);
+    li.querySelector(".cnt").textContent = n || "";
+    li.querySelector(".snip").innerHTML = n ? snippet(f, Q) : "";
+    if (n){ tot += n; nf++; }
+  });
+  document.querySelectorAll(".grp").forEach(g => g.classList.toggle("zero", Q.length > 0 && !g.querySelector("li:not(.zero)")));
+  home.classList.toggle("none", Q.length > 0 && !nf);
+  $("sumline").textContent = Q.length ? (nf ? `${tot} occurrence${tot > 1 ? "s" : ""} dans ${nf} fiche${nf > 1 ? "s" : ""}` : "") : `${F.length} fiches réflexes résumées, classées par rôle.`;
+  if (document.body.classList.contains("v")) markView(true);
+}
+
+// ---------- fiche ----------
+let cur = null, marks = [], mi = -1;
+function render(f){
+  const ordre = DOSSIERS.flatMap(d => parDossier(d.k));
+  const k = ordre.indexOf(f), pv = ordre[k - 1], nx = ordre[k + 1];
+  $("content").innerHTML =
+    `<div class="fcode"><b>${f.id}</b><span class="pill">${(DOSSIERS.find(d => d.k === f.dossier) || {t: f.dossier}).t}</span>${f.meta ? `<span>${esc(f.meta)}</span>` : ""}</div>` +
+    `<h1 class="ftitle">${esc(f.titre)}</h1>` +
+    `<div class="resume"><p>${md(f.resume)}</p></div>` +
+    f.sections.map(s => `<h2 class="sec">${esc(s.h)}</h2><ul>${s.li.map(l => `<li>${md(l)}</li>`).join("")}</ul>`).join("") +
+    `<a class="src" href="https://drive.google.com/file/d/${f.src}/view" target="_blank" rel="noopener">Ouvrir la fiche complète (PDF, Drive)</a>`;
+  $("pn").innerHTML = (pv ? `<a class="pv" href="#${pv.id}"><small>‹ ${pv.id}</small>${esc(pv.titre)}</a>` : "") +
+                      (nx ? `<a class="nx" href="#${nx.id}"><small>${nx.id} ›</small>${esc(nx.titre)}</a>` : "");
+  $("vtitle").textContent = f.id + " · " + f.titre;
+  document.title = f.id + " · Fiches réflexes PCPS";
+}
+function markView(keep){
+  const c = $("content");
+  c.querySelectorAll("mark").forEach(m => m.replaceWith(document.createTextNode(m.textContent)));
+  c.normalize();
+  marks = []; mi = -1;
+  if (Q.length){
+    const w = document.createTreeWalker(c, NodeFilter.SHOW_TEXT), nodes = [];
+    while (w.nextNode()) if (!w.currentNode.parentElement.closest(".src")) nodes.push(w.currentNode);
+    for (const node of nodes){
+      const html = highlightStr(node.data, Q);
+      if (html.indexOf("<mark>") < 0) continue;
+      const span = document.createElement("span"); span.innerHTML = html;
+      node.replaceWith(...span.childNodes);
+    }
+    marks = [...c.querySelectorAll("mark")];
+  }
+  if (marks.length) go(0, !keep); else $("hcount").textContent = "0 / 0";
+}
+function go(i, scroll = true){
+  if (!marks.length) return;
+  if (mi >= 0) marks[mi].classList.remove("cur");
+  mi = (i + marks.length) % marks.length;
+  marks[mi].classList.add("cur");
+  $("hcount").textContent = `${mi + 1} / ${marks.length}`;
+  if (scroll) marks[mi].scrollIntoView({block: "center", behavior: "smooth"});
+}
+
+function route(){
+  const id = decodeURIComponent(location.hash.slice(1));
+  const f = F.find(x => x.id === id);
+  const v = !!f;
+  document.body.classList.toggle("v", v);
+  $("back").hidden = !v; $("brand").hidden = v; $("vtitle").hidden = !v; $("fsz").hidden = !v;
+  if (v){
+    if (cur !== f){ cur = f; render(f); window.scrollTo(0, 0); }
+    markView(false);
+    if (!marks.length) window.scrollTo(0, 0);
+  } else {
+    cur = null; document.title = "Fiches réflexes PCPS";
+  }
+  setToph();
+}
+function setToph(){ document.documentElement.style.setProperty("--toph", $("top").offsetHeight + "px"); }
+
+// ---------- événements ----------
+let tm;
+$("q").addEventListener("input", () => { clearTimeout(tm); tm = setTimeout(search, 120); });
+$("q").addEventListener("keydown", e => { if (e.key === "Enter"){ e.preventDefault(); $("q").blur(); if (document.body.classList.contains("v")) go(mi + 1); } });
+$("clr").onclick = () => { $("q").value = ""; search(); $("q").focus(); };
+$("back").onclick = () => { location.hash = ""; };
+$("hprev").onclick = () => go(mi - 1);
+$("hnext").onclick = () => go(mi + 1);
+$("hall").onclick = () => { location.hash = ""; };
+let fs = 17;
+try { fs = +localStorage.getItem("fr-fs") || 17; } catch(e) {}
+const setFs = v => { fs = Math.max(14, Math.min(24, v)); document.documentElement.style.setProperty("--fs", fs + "px"); try { localStorage.setItem("fr-fs", fs); } catch(e) {} };
+setFs(fs);
+$("fminus").onclick = () => setFs(fs - 1);
+$("fplus").onclick = () => setFs(fs + 1);
+$("up").onclick = () => window.scrollTo({top: 0, behavior: "smooth"});
+addEventListener("scroll", () => $("up").classList.toggle("on", scrollY > 600), {passive: true});
+addEventListener("hashchange", route);
+addEventListener("resize", setToph);
+
+buildList();
+const qs = new URLSearchParams(location.search).get("q");
+if (qs){ $("q").value = qs; }
+search();
+route();
+}
+</script>
+</body>
+</html>
